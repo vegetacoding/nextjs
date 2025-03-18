@@ -15,14 +15,14 @@ import {
 
 export default function Overview() {
   return (
-    <div className="snap-y snap-mandatory bg-blue-gradient">
+    <div className="bg-blue-gradient">
       <section
         id="overview"
-        className="h-screen w-screen snap-start bg-transparent relative"
+        className="h-screen w-screen bg-transparent relative"
       >
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4 max-w-[1440px] h-screen flex items-center sticky top-0"
         >
@@ -38,7 +38,7 @@ export default function Overview() {
             <div className="space-y-6">
               <motion.div
                 initial={{ x: 50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="space-y-4"
               >
@@ -68,7 +68,7 @@ export default function Overview() {
 
               <motion.div
                 initial={{ x: 50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="space-y-4"
               >
@@ -86,7 +86,7 @@ export default function Overview() {
 
               <motion.div
                 initial={{ x: 50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="space-y-4"
               >
@@ -112,11 +112,11 @@ export default function Overview() {
       </section>
       <section
         id="overview-2"
-        className="h-screen w-screen snap-start bg-transparent relative overflow-hidden"
+        className="h-screen w-screen bg-transparent relative overflow-hidden"
       >
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4 max-w-[1440px] h-screen flex items-start top-0 relative z-10"
         >
@@ -176,7 +176,7 @@ export default function Overview() {
                   x: index % 2 === 0 ? -50 : 50,
                   scale: 0.9,
                 }}
-                animate={{
+                whileInView={{
                   opacity: 1,
                   x: 0,
                   scale: 1,
@@ -201,7 +201,7 @@ export default function Overview() {
             <motion.div
               className="col-span-3 mt-6 flex justify-center"
               initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
             >
               <button className="bg-golden-gradient w-[430px] text-blue-900 font-bold py-3 px-6 rounded hover:opacity-90 transition-all">
@@ -210,19 +210,14 @@ export default function Overview() {
             </motion.div>
           </div>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="absolute bottom-0 left-0 w-full h-full z-0"
-        >
+        <div>
           <Image
             src="/decor.png"
             alt="Decor Background"
             fill
-            className="object-cover object-bottom opacity-30"
+            className="custom-image"
           />
-        </motion.div>
+        </div>
       </section>
     </div>
   );

@@ -3,10 +3,14 @@
 import { motion } from "framer-motion";
 import HomePage from "./pages/HomePage";
 import Overview from "./pages/Overview";
+import GoldenPosition from "./pages/GoldenPosition";
+import NiceView from "./pages/NiceView";
+import Form from "./pages/Form";
+import Slider from "./pages/Slider";
 
 export default function Home() {
   return (
-    <main className="h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden relative">
+    <main className="h-screen overflow-y-scroll overflow-x-hidden relative">
       <HomePage />
 
       <motion.button
@@ -34,6 +38,10 @@ export default function Home() {
       </motion.button>
 
       <Overview />
+      <GoldenPosition />
+      <NiceView />
+      <Form />
+      <Slider />
     </main>
   );
 }

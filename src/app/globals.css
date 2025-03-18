@@ -73,9 +73,34 @@ body {
   /* Firefox */
 }
 
+.custom-image-1 {
+  height: auto !important;
+  width: 100% !important;
+  top: auto !important;
+
+}
+
+.custom-image-3 {
+  height: auto !important;
+  width: 100% !important;
+  top: auto !important;
+  position: relative !important;
+}
+
 .custom-image {
   height: auto !important;
   width: 100% !important;
   top: auto !important;
-  bottom: 0 !important;
+  bottom: 24px !important;
+}
+
+.custom-image-2 {
+  height: auto !important;
+  width: 100% !important;
+  top: 24px !important;
+  bottom: auto !important;
+}
+
+.relative-image {
+  position: relative !important;
 }
