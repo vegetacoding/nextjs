@@ -27,7 +27,7 @@ export default function Form() {
   return (
     <>
       <section
-        id="registration-form"
+        id="registration-form-1"
         className="w-screen relative overflow-hidden bg-white py-8 flex flex-col"
       >
         <div className="container mx-auto max-w-[1324px]">
@@ -93,7 +93,7 @@ export default function Form() {
                   transition={{ duration: 0.6, delay: 0.7 }}
                   type="text"
                   name="product"
-                  placeholder="Sản phẩm đang quan tâm nếu có"
+                  placeholder="Sản phẩm đang quan tâm"
                   value={formData.product}
                   onChange={handleChange}
                   className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-golden-gradient bg-white"
@@ -119,7 +119,7 @@ export default function Form() {
               className="text-center mt-6"
             >
               <p className="text-white font-bold text-xl p-2">
-                HOTLINE: 090.XXX.XXXX
+                HOTLINE: 035.391.2856
               </p>
             </motion.div>
           </motion.div>
@@ -352,7 +352,7 @@ export default function Form() {
         </div>
       </section>
       <section
-        id="registration-form"
+        id="registration-form-2"
         className="w-screen relative overflow-hidden bg-white pt-8 flex flex-col"
       >
         <div className="bg-white">

@@ -70,7 +70,7 @@ export default function QuotationForm() {
 
   return (
     <>
-      <section className="w-screen bg-white py-16">
+      <section id="quotation-form" className="w-screen bg-white py-16">
         <div className="container mx-auto px-4 max-w-[1320px] bg-white">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -104,7 +104,7 @@ export default function QuotationForm() {
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-[#0F3581] text-2xl font-bold mb-2"
+                  className="text-[#0F3581] text-2xl font-bold mb-2 text-center"
                 >
                   NHẬN BÁO GIÁ
                 </motion.h2>
@@ -112,7 +112,7 @@ export default function QuotationForm() {
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-[#0F3581] text-sm mb-1"
+                  className="text-[#0F3581] text-sm mb-1 text-center"
                 >
                   TRỰC TIẾP TỪ CĐT
                 </motion.p>
