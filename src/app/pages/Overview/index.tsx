@@ -15,7 +15,7 @@ export default function Overview() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="mx-auto p-8 max-w-[1440px] flex items-center sticky top-0 flex-col gap-12"
         >
           <h2 className="text-4xl font-light text-white">
@@ -26,7 +26,7 @@ export default function Overview() {
               DỰ ÁN
             </span>
           </h2>
-          <div className="grid grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ">
             <div className="relative h-[656px]">
               <Image
                 src="/gioi-thieu.png"
@@ -107,10 +107,10 @@ export default function Overview() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="container mx-auto px-4 max-w-[1440px] relative z-10 "
         >
-          <div className="grid grid-cols-3 gap-8 gap-y-2 w-full text-white p-10">
+          <div className="grid grid-cols-3  gap-8 gap-y-2 w-full text-white p-10">
             {[
               {
                 icon: InformationCircleIcon,

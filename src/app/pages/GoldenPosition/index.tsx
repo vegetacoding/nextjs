@@ -26,10 +26,10 @@ export default function GoldenPosition() {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center pt-[50px] pb-16 justify-between h-full"
+            className="flex flex-col items-center pt-[30px] xl:pt-[50px] pb-16 justify-between h-full"
           >
             <div className="flex items-center space-x-4">
-              <h2 className="text-[40px] text-golden-gradient font-semibold font-noto">
+              <h2 className="text-[25px] xl:text-[40px] text-golden-gradient font-semibold font-noto">
                 ĐẲNG CẤP 5 SAO NGAY TRƯỚC THỀM NHÀ
               </h2>
             </div>
@@ -38,7 +38,7 @@ export default function GoldenPosition() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 0.2 }}
-              className="mt-8 text-center flex flex-col items-center font-noto"
+              className="mt-8 text-center flex flex-col items-center font-noto scale-60 lg:scale-80 xl:scale-100"
             >
               <h1 className="text-[40px] text-golden-gradient mb-6 font-semibold font-noto">
                 THE OPUS ONE
