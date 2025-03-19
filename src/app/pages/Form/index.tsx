@@ -29,7 +29,7 @@ export default function Form() {
         id="registration-form"
         className="w-screen relative overflow-hidden bg-white py-8 flex flex-col"
       >
-        <div className="container mx-auto max-w-[1440px]">
+        <div className="container mx-auto max-w-[1324px]">
           <div className="bg-[#0f3581] rounded-lg p-8 shadow-lg flex flex-col items-center">
             <h2 className="text-2xl font-bold text-golden-gradient text-center mb-2">
               ĐĂNG KÝ NHẬN THÔNG TIN DỰ ÁN
@@ -83,7 +83,7 @@ export default function Form() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto mt-8 max-w-[1440px]">
+        <div className="container mx-auto mt-8 max-w-[1324px]">
           <div className="bg-white">
             <div className="relative w-full h-full rounded-t-lg overflow-hidden">
               <Image
@@ -96,7 +96,7 @@ export default function Form() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto max-w-[1440px]">
+        <div className="container mx-auto max-w-[1324px]">
           <div className="bg-white">
             <div className="relative w-full h-full  overflow-hidden">
               <Image
@@ -109,7 +109,7 @@ export default function Form() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto max-w-[1440px]">
+        <div className="container mx-auto max-w-[1324px]">
           <div className="bg-white">
             <div className="relative w-full h-full  overflow-hidden">
               <Image
@@ -122,7 +122,7 @@ export default function Form() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto max-w-[1440px]">
+        <div className="container mx-auto max-w-[1324px]">
           <div className="bg-white">
             <div className="relative w-full h-full  overflow-hidden">
               <Image

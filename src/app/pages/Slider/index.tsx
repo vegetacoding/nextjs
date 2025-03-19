@@ -7,6 +7,7 @@ import { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import DynamicSlider from "../DynamicSlider";
 
 const images = ["/slider1.png", "/slider2.png", "/slider3.png"];
 
@@ -61,126 +62,12 @@ export default function Slider() {
 
   return (
     <>
-      <section className="w-screen bg-white py-16">
-        <div className="container mx-auto px-4 max-w-[1440px]">
-          <h2 className="text-[32px] font-bold text-blue-900 text-center mb-8">
-            TIỆN ÍCH TRONG THE OPUS ONE
-          </h2>
-          <div className="relative group">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              spaceBetween={30}
-              slidesPerView={1}
-              centeredSlides={true}
-              loop={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-                bulletClass: "swiper-pagination-bullet !bg-golden-gradient",
-                bulletActiveClass:
-                  "swiper-pagination-bullet-active !bg-golden-gradient",
-              }}
-              navigation={{
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next",
-              }}
-              className="w-full h-[600px] relative pb-12"
-            >
-              {images.map((image, index) => (
-                <SwiperSlide key={index} className="relative">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src={image}
-                      alt={`Tiện ích ${index + 1}`}
-                      fill
-                      className="object-cover rounded-lg"
-                      priority={index === 0}
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            {/* Custom Navigation Buttons */}
-            <button className="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-16 z-10 w-8 h-14 flex items-center justify-center">
-              <svg
-                width="24"
-                height="44"
-                viewBox="0 0 24 44"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M22 2L2 22L22 42"
-                  stroke="#0F3581"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            <button className="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-16 z-10 w-8 h-14 flex items-center justify-center">
-              <svg
-                width="24"
-                height="44"
-                viewBox="0 0 24 44"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 2L22 22L2 42"
-                  stroke="#0F3581"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <style jsx global>{`
-          .swiper {
-            padding-bottom: 3rem !important;
-          }
-          .swiper-pagination {
-            bottom: 0 !important;
-          }
-          .swiper-pagination-bullet {
-            width: 12px;
-            height: 12px;
-            background: #d9d9d9;
-            opacity: 1;
-            margin: 0 6px !important;
-          }
-          .swiper-pagination-bullet-active {
-            background: #0f3581;
-          }
-          .swiper-button-prev::after,
-          .swiper-button-next::after {
-            display: none;
-          }
-          .swiper-button-prev,
-          .swiper-button-next {
-            transition: opacity 0.3s ease;
-          }
-          .swiper-button-disabled {
-            opacity: 0.5;
-          }
-        `}</style>
-      </section>
-      <section
-        id="slider-2"
-        className="w-screen h-screen bg-blue-gradient py-16"
-      >
-        <h2 className="text-[32px] font-bold text-center mb-8 text-white">
+      <DynamicSlider images={images} title="TIỆN ÍCH TRONG THE OPUS ONE" />
+      <section id="slider-2" className="w-screen bg-blue-gradient py-16">
+        <h2 className="text-[32px] font-bold text-center mb-8  text-white max-w-[1324px] mx-auto">
           MẶT BẰNG ĐIỂN HÌNH
         </h2>
-        <div className="px-4">
-          {/* Button Group */}
+        <div className="px-4 mx-auto max-w-[1324px]">
           <div className="flex justify-center gap-1">
             {Object.keys(buildingData).map((building) => (
               <button
@@ -198,8 +85,7 @@ export default function Slider() {
               </button>
             ))}
           </div>
-
-          <div className="relative group bg-white rounded-lg p-8 shadow-lg">
+          <div className="group bg-white rounded-lg p-8 shadow-lg">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={30}
@@ -417,6 +303,34 @@ export default function Slider() {
             cursor: not-allowed;
           }
         `}</style>
+      </section>
+      <section
+        id="premium"
+        className="w-screen h-screen bg-blue-gradient py-16 relative overflow-hidden"
+      >
+        <div className="container mx-auto px-4 max-w-[1440px] relative h-full">
+          <div className="flex flex-col items-end text-right text-white mt-16 pr-32">
+            <h2 className="text-[32px] font-bold mb-4">TIÊU CHUẨN BÀN GIAO</h2>
+            <h1 className="text-[48px] font-bold text-golden-gradient mb-8">
+              CAO CẤP BẬC NHẤT
+            </h1>
+            <h3 className="text-[24px] font-bold mb-12">VINHOMES GRAND PARK</h3>
+            <button className="bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20">
+              ĐĂNG KÝ NHẬN THÔNG TIN
+            </button>
+          </div>
+
+          <div className="absolute bottom-0 left-0">
+            <Image
+              src="/image21.png"
+              alt="Premium Sofa"
+              width={920}
+              height={453}
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
       </section>
     </>
   );

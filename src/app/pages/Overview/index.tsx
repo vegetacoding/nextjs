@@ -3,31 +3,31 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  BuildingOffice2Icon,
+  InformationCircleIcon,
   HomeIcon,
   ScaleIcon,
-  MapPinIcon,
-  BuildingOfficeIcon,
-  DocumentIcon,
-  CurrencyDollarIcon,
-  CalendarIcon,
-} from "@heroicons/react/24/solid";
+} from "@heroicons/react/24/outline";
 
 export default function Overview() {
   return (
     <div className="bg-blue-gradient">
-      <section
-        id="overview"
-        className="h-screen w-screen bg-transparent relative"
-      >
+      <section id="overview" className="w-screen bg-transparent relative">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="container mx-auto px-4 max-w-[1440px] h-screen flex items-center sticky top-0"
+          className="mx-auto p-8 max-w-[1440px] flex items-center sticky top-0 flex-col gap-4"
         >
-          <div className="grid grid-cols-2 gap-12 items-center">
-            <div className="relative h-[700px]">
+          <h2 className="text-4xl font-light text-white">
+            <span className="font-handwriting text-[70px] block mb-2">
+              Tổng quan
+            </span>
+            <span className=" ml-20 text-golden-gradient font-semibold text-[40px]">
+              DỰ ÁN
+            </span>
+          </h2>
+          <div className="grid grid-cols-2 gap-12 items-start">
+            <div className="relative h-[656px]">
               <Image
                 src="/gioi-thieu.png"
                 alt="Tổng quan dự án"
@@ -42,25 +42,15 @@ export default function Overview() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="space-y-4"
               >
-                <h2 className="text-4xl font-light text-white">
-                  <span className="font-handwriting text-5xl block mb-2">
-                    Tổng quan
-                  </span>
-                  <span className="text-golden-gradient">DỰ ÁN</span>
-                </h2>
-                <p className="text-white text-lg leading-relaxed">
-                  <span className="text-golden-gradient font-medium">
-                    The Opus One
-                  </span>{" "}
-                  là cái bắt tay chiến lược giữa Vinhomes & CĐT đến từ Nhật Bản:
+                <p className="text-white text-xl leading-relaxed">
+                  <span className="text-golden-gradient ">The Opus One</span> là
+                  cái bắt tay chiến lược giữa Vinhomes & CĐT đến từ Nhật Bản:
                   Samty Group, đánh dấu mốc kết thúc chói lọi cho hành trình hơn
                   5 năm kiến tạo siêu đô thị Vinhomes Grand Park.
                 </p>
-                <p className="text-white text-lg leading-relaxed">
+                <p className="text-white text-xl leading-relaxed">
                   Với vị thế là phân khu cao cấp nhất dự án,{" "}
-                  <span className="text-golden-gradient font-medium">
-                    The Opus One
-                  </span>{" "}
+                  <span className="text-golden-gradient">The Opus One</span>{" "}
                   thừa hưởng mọi yếu tố &quot;NHẤT&quot; - vị trí, tầm view,
                   tiện ích, nội thất và sự đẳng cấp.
                 </p>
@@ -112,60 +102,66 @@ export default function Overview() {
       </section>
       <section
         id="overview-2"
-        className="h-screen w-screen bg-transparent relative overflow-hidden"
+        className="w-screen bg-transparent relative overflow-hidden "
       >
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="container mx-auto px-4 max-w-[1440px] h-screen flex items-start top-0 relative z-10"
+          className="container mx-auto px-4 max-w-[1440px] relative z-10 "
         >
-          <div className="grid grid-cols-3 gap-8 w-full mt-32 text-white">
+          <div className="grid grid-cols-3 gap-8 gap-y-2 w-full text-white p-10">
             {[
               {
-                icon: BuildingOffice2Icon,
+                icon: InformationCircleIcon,
                 title: "TÊN PHÂN KHU",
                 content: "THE OPUS ONE",
+                highlight: true,
+                showIcon: true,
               },
               {
                 icon: HomeIcon,
                 title: "SỐ LƯỢNG",
                 content: "1.952 CĂN HỘ",
+                highlight: true,
+                showIcon: true,
               },
               {
                 icon: ScaleIcon,
                 title: "PHÁP LÝ",
-                content: "SỔ HỒNG SỞ HỮU LÂU DÀI",
+                content: "Sổ hồng sở hữu lâu dài",
+                highlight: true,
+                showIcon: true,
               },
               {
-                icon: MapPinIcon,
-                title: "VỊ TRÍ",
+                title: "VỊ TRÍ:",
                 content:
-                  "Trung tâm Vinhomes Grand Park, P. Long Bình và Long Thành Mỹ, TP. Thủ Đức",
+                  "Trung tâm Vinhomes Grand Park, P. Long Bình và Long Thạnh Mỹ, TP. Thủ Đức",
+                smallText: true,
               },
               {
-                icon: BuildingOfficeIcon,
-                title: "ĐƠN VỊ XÂY DỰNG",
-                content: "Cotecons",
+                title: "ĐƠN VỊ XÂY DỰNG:",
+                content: "Coteccons",
+              },
+
+              {
+                title: "GIÁ BÁN:",
+                content: "Từ 4,4 tỷ/căn",
+                subContent: "(chưa trừ ưu đãi)",
+                smallText: true,
               },
               {
-                icon: DocumentIcon,
-                title: "LOẠI HÌNH CĂN HỘ",
+                title: "QUY MÔ:",
+                content: "4 TÒA CĂN HỘ",
+                subContent: "(Cao từ 20 - 35 tầng)",
+                smallText: true,
+              },
+              {
+                title: "LOẠI HÌNH CĂN HỘ:",
                 content: "Studio, 1PN+, 2PN, 3PN",
               },
               {
-                icon: BuildingOffice2Icon,
-                title: "QUY MÔ",
-                content: "4 TÒA CĂN HỘ (Cao từ 20 - 35 tầng)",
-              },
-              {
-                icon: CurrencyDollarIcon,
-                title: "GIÁ BÁN",
-                content: "Từ 4,4 tỷ/căn (chưa ưu đãi)",
-              },
-              {
-                icon: CalendarIcon,
-                title: "THỜI GIAN BÀN GIAO",
+                title: "THỜI GIAN BÀN GIAO:",
                 content: "Dự kiến Tháng 3 - 2026",
               },
             ].map((item, index) => (
@@ -173,51 +169,79 @@ export default function Overview() {
                 key={index}
                 initial={{
                   opacity: 0,
-                  x: index % 2 === 0 ? -50 : 50,
-                  scale: 0.9,
+                  y: 20,
                 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
-                  scale: 1,
+                  y: 0,
                 }}
                 transition={{
                   duration: 0.6,
                   delay: index * 0.1,
                 }}
-                className="flex items-center space-x-4"
+                className={`flex items-start space-x-4 group pb-4 ${
+                  index < 6 ? "border-b border-white/30" : ""
+                }`}
               >
-                <div className="text-4xl text-white">
-                  <item.icon className="h-10 w-10" />
-                </div>
-                <div>
-                  <h3 className="text-golden-gradient font-medium text-xl">
-                    {item.title}
-                  </h3>
-                  <p className="text-lg">{item.content}</p>
+                <div className="space-y-1 flex-1">
+                  <div className="flex items-start gap-4 flex-col justify-center">
+                    {item.showIcon ? (
+                      <div className=" text-white rounded-lg group-hover:scale-110 transition-all">
+                        <item.icon className="h-[70px] w-[70px]" />
+                      </div>
+                    ) : (
+                      <div />
+                    )}
+                    <h3 className="text-white text-2xl font-medium tracking-wide">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <div>
+                    <p
+                      className={`${
+                        item.highlight
+                          ? "text-golden-gradient font-semibold text-[28px]"
+                          : "text-white"
+                      } ${
+                        item.smallText
+                          ? "text-xl leading-relaxed"
+                          : "text-xl leading-relaxed"
+                      }`}
+                    >
+                      {item.content}
+                    </p>
+                    {item.subContent && (
+                      <p className="text-xl text-[#8A9CC9] mt-0.5">
+                        {item.subContent}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             ))}
-            <motion.div
-              className="col-span-3 mt-6 flex justify-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1 }}
-            >
-              <button className="bg-golden-gradient w-[430px] text-blue-900 font-bold py-3 px-6 rounded hover:opacity-90 transition-all">
-                NHẬN BROCHURE DỰ ÁN QUA ZALO/VIBER
-              </button>
-            </motion.div>
           </div>
+          <motion.div
+            className="flex justify-center mt-12"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1 }}
+          >
+            <button className="bg-golden-gradient text-blue-900 font-bold py-4 px-8 rounded-lg hover:opacity-90 transition-all text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              NHẬN BROCHURE DỰ ÁN QUA ZALO/VIBER
+            </button>
+          </motion.div>
         </motion.div>
-        <div>
+
+        <div className="">
           <Image
             src="/decor.png"
             alt="Decor Background"
             fill
-            className="custom-image"
+            className="custom-image relative-image"
           />
         </div>
+        <div className="bg-white h-[50px] w-full"></div>
       </section>
     </div>
   );

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @tailwind base;
 @tailwind components;
@@ -91,7 +92,7 @@ body {
   height: auto !important;
   width: 100% !important;
   top: auto !important;
-  bottom: 24px !important;
+  bottom: 0 !important;
 }
 
 .custom-image-2 {
@@ -103,4 +104,8 @@ body {
 
 .relative-image {
   position: relative !important;
+}
+
+.font-handwriting {
+  font-family: 'Dancing Script', cursive;
 }

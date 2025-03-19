@@ -8,7 +8,7 @@ export default function NiceView() {
       id="home-page"
       className="h-screen w-screen snap-start relative overflow-hidden flex flex-col"
     >
-      <div className="bg-golden-gradient text-blue-gradient text-center py-2 text-2xl font-bold">
+      <div className="bg-golden-gradient text-blue-gradient text-center py-3 text-3xl  h-[60px]">
         SỐNG SANG - VIEW ĐẸP
       </div>
       <div className="">
@@ -16,9 +16,8 @@ export default function NiceView() {
           src="/view.png"
           alt="The Opus One Utilities"
           fill
-          className="object-cover custom-image-3"
+          className="relative-image"
           priority
-          quality={100}
         />
       </div>
     </section>
