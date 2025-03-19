@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function NiceView() {
   return (
     <section
-      id="home-page"
+      id="location"
       className="w-screen snap-start relative overflow-hidden flex flex-col"
     >
       <motion.div

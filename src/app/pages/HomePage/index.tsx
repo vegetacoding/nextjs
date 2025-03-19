@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <section
       id="home-page"
-      className="h-screen w-screen snap-start relative overflow-hidden"
+      className="h-[300px] sm:h-[500px] lg:h-screen w-screen snap-start relative overflow-hidden"
     >
       <motion.div
         className="absolute inset-0"
@@ -83,12 +83,6 @@ export default function HomePage() {
                 className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
               >
                 Tiện ích
-              </a>
-              <a
-                href="#gallery"
-                className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
-              >
-                Thư viện ảnh
               </a>
             </div>
 
@@ -208,14 +202,6 @@ export default function HomePage() {
                 >
                   Tiện ích
                 </a>
-                <a
-                  href="#gallery"
-                  onClick={toggleMobileMenu}
-                  className="text-white text-xl hover:text-primary-400"
-                >
-                  Thư viện ảnh
-                </a>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

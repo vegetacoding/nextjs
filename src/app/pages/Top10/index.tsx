@@ -67,14 +67,17 @@ export default function Top10() {
     <>
       <section className="w-screen  bg-[#0F3581] relative overflow-hidden">
         <div className="container mx-auto max-w-[1440px] h-full relative p-8 sm:p-16">
-          <motion.h2
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-[35px] sm:text-[45px] mb-12 font-bold text-golden-gradient font-noto hidden sm:block"
-          >
-            TOP 10 LÝ DO SỞ HỮU
-          </motion.h2>
+          <div className="block lg:hidden">
+            <motion.h2
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="text-[35px] sm:text-[45px] mb-12 font-bold text-golden-gradient font-noto"
+            >
+              TOP 10 LÝ DO SỞ HỮU
+            </motion.h2>
+          </div>
+
           <div className="flex flex-col lg:flex-row justify-between relative gap-8 sm:gap-16">
             {/* Left Column */}
             <motion.div

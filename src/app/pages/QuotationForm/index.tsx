@@ -5,7 +5,28 @@ import { useState } from "react";
 import DynamicSlider from "../DynamicSlider";
 import { motion } from "framer-motion";
 
-const images = ["/slider1.png", "/slider2.png", "/slider3.png"];
+const images = [
+  "/mau/Copy of DSC05453.png",
+  "/mau/Copy of DSC05486.png",
+  "/mau/Copy of DSC05494.png",
+  "/mau/Copy of DSC05512.png",
+  "/mau/Copy of DSC05515.png",
+  "/mau/Copy of DSC05540.png",
+  "/mau/Copy of DSC05549.jpg",
+  "/mau/Copy of DSC05556.png",
+  "/mau/Copy of DSC05589.png",
+  "/mau/Copy of DSC05620.png",
+  "/mau/Copy of DSC05623.png",
+  "/mau/Copy of DSC05642.png",
+  "/mau/Copy of DSC05655.png",
+  "/mau/Copy of DSC05669.png",
+  "/mau/Copy of DSC05697.png",
+  "/mau/Copy of DSC05734.jpg",
+  "/mau/Copy of DSC05739.jpg",
+  "/mau/Copy of Tam-view-03.jpg",
+  "/mau/Copy of TUK03928.png",
+  "/mau/Copy of TUK03969.jpg",
+];
 
 export default function QuotationForm() {
   const [formData, setFormData] = useState({

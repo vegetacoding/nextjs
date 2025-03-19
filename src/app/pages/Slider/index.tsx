@@ -15,20 +15,38 @@ const images = ["/slider1.png", "/slider2.png", "/slider3.png"];
 // Dữ liệu cho các tòa nhà
 const buildingData = {
   OS1: {
-    images: ["/slider1.png", "/slider2.png"],
+    images: [
+      "/mat-bang-tang-du-an-the-opus-one (1).png",
+      "/mat-bang-tang-du-an-the-opus-one (2).png",
+      "/mat-bang-tang-du-an-the-opus-one (3).png",
+      "/mat-bang-tang-du-an-the-opus-one (4).png",
+      "/mat-bang-tang-du-an-the-opus-one.png",
+    ],
     title: "Tòa OS1",
   },
   OS2: {
-    images: ["/slider1.png", "/slider2.png"],
+    images: [
+      "/MATBANG DIENHINH OS2 280824_001.png",
+      "/MATBANG DIENHINH OS2 280824_002.png",
+      "/MATBANG DIENHINH OS2 280824_003.png",
+      "/MATBANG DIENHINH OS2 280824_004.png",
+      "/MATBANG DIENHINH OS2 280824_005.png",
+    ],
     title: "Tòa OS2",
   },
   OS3: {
-    images: ["/slider1.png", "/slider2.png"],
+    images: [
+      "/TMB DIENHINH OS3_001.png",
+      "/TMB DIENHINH OS3_002.png",
+      "/TMB DIENHINH OS3_003.png",
+      "/TMB DIENHINH OS3_004.png",
+      "/TMB DIENHINH OS3_005.png",
+    ],
     title: "Tòa OS3",
   },
-  OS4: {
-    images: ["/slider1.png", "/slider2.png"],
-    title: "Tòa OS4",
+  OS5: {
+    images: ["/os51.png", "/os52.png", "/os53.png", "/os54.png", "/os55.png"],
+    title: "Tòa OS5",
   },
 };
 
@@ -37,7 +55,7 @@ const apartmentData = [
   {
     id: 1,
     title: "CĂN HỘ STUDIO",
-    image: "/studio.png",
+    image: "/Stu.jpg",
     info: {
       "Số phòng ngủ": "01",
       "Diện tích thông thủy": "33,2 m2",
@@ -47,9 +65,29 @@ const apartmentData = [
   {
     id: 2,
     title: "CĂN HỘ 1 PHÒNG NGỦ",
-    image: "/studio.png",
+    image: "/1PN.jpg",
     info: {
       "Số phòng ngủ": "01",
+      "Diện tích thông thủy": "45,5 m2",
+      "Diện tích tim tường": "42,8 m2",
+    },
+  },
+  {
+    id: 3,
+    title: "CĂN HỘ 2 PHÒNG NGỦ",
+    image: "/2PN.jpg",
+    info: {
+      "Số phòng ngủ": "02",
+      "Diện tích thông thủy": "45,5 m2",
+      "Diện tích tim tường": "42,8 m2",
+    },
+  },
+  {
+    id: 4,
+    title: "CĂN HỘ 3 PHÒNG NGỦ",
+    image: "/3PN.jpg",
+    info: {
+      "Số phòng ngủ": "03",
       "Diện tích thông thủy": "45,5 m2",
       "Diện tích tim tường": "42,8 m2",
     },
@@ -64,7 +102,7 @@ export default function Slider() {
   return (
     <>
       <DynamicSlider images={images} title="TIỆN ÍCH TRONG THE OPUS ONE" />
-      <section id="slider-2" className="w-screen bg-blue-gradient">
+      <section id="utilities" className="w-screen bg-blue-gradient">
         <div className="bg-golden-gradient pt-10 sm:pt-16">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}

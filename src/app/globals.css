@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,89.2,750;1,89.2,750&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @tailwind base;
@@ -118,7 +118,7 @@ body {
 .font-noto {
   font-family: "Noto Serif Display", serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 750;
   font-style: normal;
   font-variation-settings:
     "wdth" 89.2;

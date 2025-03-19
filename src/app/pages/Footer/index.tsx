@@ -12,8 +12,8 @@ import {
 const socialLinks = [
   {
     icon: EnvelopeIcon,
-    label: "vsales.grandpark@vinhomes.vn",
-    href: "mailto:vsales.grandpark@vinhomes.vn",
+    label: "minhtam.minhtamland@gmail.com",
+    href: "mailto:minhtam.minhtamland@gmail.com",
   },
   {
     icon: UserGroupIcon,
@@ -29,6 +29,11 @@ const socialLinks = [
 
 const addresses = [
   {
+    title: "CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN ĐỊA ỐC MINH TÂM",
+    content:
+      "Số D9-32, đường D9, khu The Manhattan, Phường Long Bình, Thành Phố Thủ Đức, Thành phố Hồ Chí Minh",
+  },
+  {
     title: "ĐỊA CHỈ DỰ ÁN",
     content:
       "Khu dân cư và công viên Phước Thiện, Phường Long Bình và Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM",
@@ -38,12 +43,6 @@ const addresses = [
     content:
       "L3-01 (N301) và L4-01 (N401) Tầng 3, Trung tâm thương mại Vincom Mega Mall Thảo Điền, 161 Đường Võ Nguyên Giáp, P.Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
   },
-];
-
-const disclaimers = [
-  "Thông tin, các tiện ích trong tài liệu bán hàng chỉ mang tính chất tương đối và có thể được điều chỉnh theo quyết định của chủ đầu tư tại từng thời điểm quy hoạch và thực tế thi công dự án.",
-  "Hình ảnh mang tính minh họa đính hướng. Các hình ảnh chi tiết sẽ được Chủ đầu tư cập nhật công khai trong quá trình triển khai.",
-  "Các thông tin cam kết chính thức sẽ được quy định cụ thể tại Hợp đồng mua bán. Việc quản lý, vận hành và kinh doanh của khu đô thị sẽ theo quy định của Ban quản lý.",
 ];
 
 export default function Footer() {
@@ -63,10 +62,10 @@ export default function Footer() {
               />
             </div>
             <Link
-              href="tel:1800xxxx"
+              href="tel:0353912856"
               className="inline-flex items-center gap-2 bg-white/10 rounded px-4 py-2 hover:bg-white/20 transition-colors"
             >
-              <PhoneIcon className="h-5 w-5" /> HOTLINE
+              <PhoneIcon className="h-5 w-5" /> HOTLINE: +84 3539 12856
             </Link>
             <div className="mt-6 space-y-3">
               {socialLinks.map((link, index) => (
@@ -93,15 +92,6 @@ export default function Footer() {
           </div>
 
           {/* Disclaimer Section */}
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="col-span-3">
-            <div className="text-xs space-y-2">
-              {disclaimers.map((text, index) => (
-                <p key={index}>{text}</p>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </footer>
