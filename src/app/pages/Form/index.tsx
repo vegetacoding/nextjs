@@ -7,7 +7,7 @@ export default function Form() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
+    product: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -30,17 +30,17 @@ export default function Form() {
         className="w-screen relative overflow-hidden bg-white py-8 flex flex-col"
       >
         <div className="container mx-auto max-w-[1324px]">
-          <div className="bg-[#0f3581] rounded-lg p-8 shadow-lg flex flex-col items-center">
-            <h2 className="text-2xl font-bold text-golden-gradient text-center mb-2">
+          <div className="bg-[#152F68] rounded-lg py-8 px-12 shadow-lg flex flex-col items-center">
+            <h2 className="text-3xl font-bold text-golden-gradient text-center mb-2">
               ĐĂNG KÝ NHẬN THÔNG TIN DỰ ÁN
             </h2>
-            <p className="text-white text-center text-sm mb-6">
-              * QUÝ ANH CHỊ QUAN TÂM NHẬN BẢNG GIÁ &ldquo;ƯU ĐÃI NHẤT, GIÁ TỐT
-              NHẤT&rdquo; THÔNG TIN CẬP NHẬT MỚI NHẤT TỪ CĐT
+            <p className="text-white text-center text-base mb-8 uppercase">
+              * Quý anh chị đăng ký nhận bảng giá 16 căn đẹp nhất, giá tốt nhất
+              trong đợt đầu mở bán tại đây
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4 w-full">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <input
                   type="text"
                   name="name"
@@ -60,10 +60,10 @@ export default function Form() {
                   required
                 />
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="Email (nếu có)"
-                  value={formData.email}
+                  type="text"
+                  name="product"
+                  placeholder="Sản phẩm đang quan tâm nếu có"
+                  value={formData.product}
                   onChange={handleChange}
                   className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-golden-gradient bg-white"
                 />
@@ -77,7 +77,7 @@ export default function Form() {
             </form>
 
             <div className="text-center mt-6">
-              <p className="text-golden-gradient font-bold text-xl">
+              <p className="text-white font-bold text-xl p-2">
                 HOTLINE: 090.XXX.XXXX
               </p>
             </div>
