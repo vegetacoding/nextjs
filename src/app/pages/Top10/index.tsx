@@ -65,10 +65,10 @@ export default function Top10() {
   return (
     <>
       <section className="w-screen h-[766px] bg-[#0F3581] relative overflow-hidden">
-        <div className="container mx-auto px-4 max-w-[1440px] h-full relative pt-8">
-          <div className="flex justify-between relative">
+        <div className="container mx-auto max-w-[1440px] h-full relative p-16 pb-0">
+          <div className="flex justify-between relative gap-16">
             {/* Left Column */}
-            <div className="w-[30%] space-y-6">
+            <div className="w-[33%] space-y-6">
               {reasonsData.slice(0, 5).map((reason) => (
                 <div key={reason.id} className="text-white">
                   <div className="flex items-start gap-3">
@@ -76,7 +76,7 @@ export default function Top10() {
                       {reason.id}
                     </span>
                     <div>
-                      <h3 className="text-base font-bold mb-1">
+                      <h3 className="text-base text-golden-gradient font-bold mb-1">
                         {reason.title}
                       </h3>
                       <p className="text-sm opacity-80 whitespace-pre-line leading-tight">
@@ -88,8 +88,8 @@ export default function Top10() {
               ))}
             </div>
 
-            <div className=" w-[500px]">
-              <h2 className="text-[40px] font-bold text-golden-gradient pt-8 mb-12">
+            <div className="w-[500px] flex flex-col items-center justify-center gap-4">
+              <h2 className="text-[35px] font-bold text-golden-gradient font-noto">
                 TOP 10 LÝ DO SỞ HỮU
               </h2>
               {/* Center Image */}
@@ -106,7 +106,7 @@ export default function Top10() {
             </div>
 
             {/* Right Column */}
-            <div className="w-[30%] space-y-6">
+            <div className="w-[33%] space-y-6">
               {reasonsData.slice(5).map((reason) => (
                 <div key={reason.id} className="text-white">
                   <div className="flex items-start gap-3">
@@ -114,7 +114,7 @@ export default function Top10() {
                       {reason.id}
                     </span>
                     <div>
-                      <h3 className="text-base font-bold mb-1">
+                      <h3 className="text-base text-golden-gradient font-bold mb-1">
                         {reason.title}
                       </h3>
                       <p className="text-sm opacity-80 whitespace-pre-line leading-tight">
@@ -129,19 +129,24 @@ export default function Top10() {
         </div>
       </section>
 
-      <section className="w-screen min-h-[600px] bg-[#0F3581] relative overflow-hidden py-16">
+      <section className="w-screen min-h-[600px] bg-[#0F3581] relative overflow-hidden p-16">
         <div className="container mx-auto px-4 max-w-[1440px]">
           <div className="flex justify-between items-center gap-8">
             {/* Left Content */}
             <div className="w-1/2 text-white">
-              <h3 className="font-script text-2xl mb-4 text-golden-gradient">
+              <h3 className="font-script text-2xl mb-4 text-white font-handwriting text-[40px] ">
                 Đại lý phân phối
               </h3>
-              <h2 className="text-xl font-bold mb-2">ĐỘC QUYỀN CĂN HỘ</h2>
-              <h1 className="text-4xl font-bold text-golden-gradient mb-6">
-                THE OPUS ONE
-              </h1>
-              <h4 className="text-xl font-bold mb-8">
+              <div className="flex flex-col">
+                <h2 className="text-lg font-bold  text-golden-gradient">
+                  ĐỘC QUYỀN CĂN HỘ
+                </h2>
+                <h1 className="text-[35px] font-bold text-golden-gradient mb-6">
+                  THE OPUS ONE
+                </h1>
+              </div>
+
+              <h4 className="text-2xl font-bold mb-8">
                 MINH TÂM LAND - ĐẠI LÝ F1 CHIẾN LƯỢC CỦA VINHOMES TẠI THE OPUS
                 ONE
               </h4>
@@ -206,7 +211,7 @@ export default function Top10() {
                   placeholder="Số điện thoại"
                   className="w-full px-4 py-2 rounded bg-white/10 border border-white/20 text-white placeholder-white/50"
                 />
-                <button className="w-full bg-yellow-400 text-blue-gradient font-bold py-3 rounded hover:opacity-90 transition-opacity">
+                <button className="w-full bg-golden-gradient text-blue-gradient font-bold py-3 rounded hover:opacity-90 transition-opacity">
                   ĐĂNG KÝ TƯ VẤN NGAY
                 </button>
               </div>

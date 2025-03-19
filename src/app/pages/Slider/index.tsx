@@ -63,11 +63,11 @@ export default function Slider() {
   return (
     <>
       <DynamicSlider images={images} title="TIỆN ÍCH TRONG THE OPUS ONE" />
-      <section id="slider-2" className="w-screen bg-blue-gradient py-16">
-        <h2 className="text-[32px] font-bold text-center mb-8  text-white max-w-[1324px] mx-auto">
-          MẶT BẰNG ĐIỂN HÌNH
-        </h2>
-        <div className="px-4 mx-auto max-w-[1324px]">
+      <section id="slider-2" className="w-screen bg-blue-gradient">
+        <div className="bg-golden-gradient pt-16">
+          <h2 className="text-[32px] font-bold text-center mb-8  text-blue-gradient max-w-[1324px] mx-auto font-noto">
+            MẶT BẰNG ĐIỂN HÌNH
+          </h2>
           <div className="flex justify-center gap-1">
             {Object.keys(buildingData).map((building) => (
               <button
@@ -85,7 +85,10 @@ export default function Slider() {
               </button>
             ))}
           </div>
-          <div className="group bg-white rounded-lg p-8 shadow-lg">
+        </div>
+
+        <div className="px-4 mx-auto max-w-[1324px] bg-transparent">
+          <div className="group bg-transparent rounded-lg p-8">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={30}
@@ -129,7 +132,7 @@ export default function Slider() {
             </Swiper>
 
             {/* Custom Navigation Buttons */}
-            <button className="swiper-button-prev-2 absolute top-1/2 -translate-y-1/2 -left-16 z-10 w-8 h-14 flex items-center justify-center">
+            <button className="swiper-button-prev-2 absolute top-1/2 -translate-y-1/2 -left-16 z-10 w-8 h-14 flex items-center justify-center ">
               <svg
                 width="24"
                 height="44"
@@ -139,7 +142,7 @@ export default function Slider() {
               >
                 <path
                   d="M22 2L2 22L22 42"
-                  stroke="#0F3581"
+                  stroke="#FFFFFF"
                   strokeWidth="4"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -156,7 +159,7 @@ export default function Slider() {
               >
                 <path
                   d="M2 2L22 22L2 42"
-                  stroke="#0F3581"
+                  stroke="#FFFFFF"
                   strokeWidth="4"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -196,13 +199,13 @@ export default function Slider() {
           }
         `}</style>
       </section>
-      <section id="slider-3" className="w-screen bg-golden-gradient py-16">
+      <section id="slider-3" className="w-screen bg-golden-gradient py-12">
         <div className="container mx-auto px-4 max-w-[1440px]">
-          <h2 className="text-[32px] font-bold text-center mb-8 text-[#0F3581]">
+          <h2 className="text-[32px] font-bold text-center mb-8 text-[#0F3581] font-noto">
             MẶT BẰNG CĂN HỘ THE OPUS ONE
           </h2>
 
-          <div className="bg-golden-gradient rounded-lg p-12">
+          <div className="bg-golden-gradient rounded-lg px-16">
             <Swiper
               modules={[Navigation]}
               spaceBetween={30}
@@ -218,7 +221,7 @@ export default function Slider() {
               {apartmentData.map((apartment, index) => (
                 <SwiperSlide key={index}>
                   <div className="grid grid-cols-2 gap-16 text-blue-gradient">
-                    <div className="">
+                    <div className="flex-1">
                       <div className="relative w-full h-[400px]">
                         <Image
                           src={apartment.image}
@@ -230,20 +233,23 @@ export default function Slider() {
                       </div>
                     </div>
 
-                    <div>
-                      <h4 className="text-3xl font-bold text-blue-gradient mb-8">
-                        THÔNG TIN CĂN HỘ
+                    <div className="w-[425px]">
+                      <h4 className="text-3xl text-blue-gradient mb-4 font-noto">
+                        {apartment.title}
                       </h4>
-                      <div className="space-y-6">
+                      <div className="text-black text-lg font-medium tracking-wider mb-4">
+                        THÔNG TIN CĂN HỘ
+                      </div>
+                      <div className="flex flex-col gap-4 py-5 border-t border-b border-[#152F68]">
                         {Object.entries(apartment.info).map(
                           ([key, value], idx) => (
-                            <div key={idx} className="flex items-center gap-4">
-                              <div className="w-2 h-2 rounded-full bg-golden-gradient" />
+                            <div key={idx} className="flex items-center gap-2">
                               <div className="flex justify-between w-full border-b border-white/20 pb-2">
-                                <span className="text-black text-lg">
+                                <span className="text-black text-xl flex items-center gap-2">
+                                  <div className="w-2 h-2 rounded-full bg-[#0F3581]" />
                                   {key}
                                 </span>
-                                <span className="text-blue-gradient font-bold text-lg">
+                                <span className="text-blue-gradient font-bold text-3xl">
                                   {value}
                                 </span>
                               </div>
@@ -263,7 +269,7 @@ export default function Slider() {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M15 6L9 12L15 18"
-                    stroke="#173370"
+                    stroke="#FFFFFF"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -278,7 +284,7 @@ export default function Slider() {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M9 6L15 12L9 18"
-                    stroke="#173370"
+                    stroke="#FFFFFF"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -306,15 +312,19 @@ export default function Slider() {
       </section>
       <section
         id="premium"
-        className="w-screen h-screen bg-blue-gradient py-16 relative overflow-hidden"
+        className="w-screen h-[712px] bg-blue-gradient py-16 relative overflow-hidden"
       >
         <div className="container mx-auto px-4 max-w-[1440px] relative h-full">
           <div className="flex flex-col items-end text-right text-white mt-16 pr-32">
-            <h2 className="text-[32px] font-bold mb-4">TIÊU CHUẨN BÀN GIAO</h2>
-            <h1 className="text-[48px] font-bold text-golden-gradient mb-8">
+            <h2 className="text-[24px] font-bold mb-2 text-golden-gradient font-noto">
+              TIÊU CHUẨN BÀN GIAO
+            </h2>
+            <h1 className="text-[48px] font-bold text-golden-gradient mb-2 font-noto">
               CAO CẤP BẬC NHẤT
             </h1>
-            <h3 className="text-[24px] font-bold mb-12">VINHOMES GRAND PARK</h3>
+            <h3 className="text-[28px] font-bold mb-8 text-golden-gradient font-noto">
+              VINHOMES GRAND PARK
+            </h3>
             <button className="bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20">
               ĐĂNG KÝ NHẬN THÔNG TIN
             </button>

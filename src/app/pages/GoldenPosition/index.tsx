@@ -29,7 +29,7 @@ export default function GoldenPosition() {
             className="flex flex-col items-center pt-[50px] pb-16 justify-between h-full"
           >
             <div className="flex items-center space-x-4">
-              <h2 className="text-[40px] text-golden-gradient font-semibold">
+              <h2 className="text-[40px] text-golden-gradient font-semibold font-noto">
                 ĐẲNG CẤP 5 SAO NGAY TRƯỚC THỀM NHÀ
               </h2>
             </div>
@@ -38,9 +38,9 @@ export default function GoldenPosition() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 0.2 }}
-              className="mt-8 text-center flex flex-col items-center"
+              className="mt-8 text-center flex flex-col items-center font-noto"
             >
-              <h1 className="text-[40px] text-golden-gradient mb-6 font-semibold">
+              <h1 className="text-[40px] text-golden-gradient mb-6 font-semibold font-noto">
                 THE OPUS ONE
               </h1>
               <div className="flex flex-col gap-1 text-golden-gradient text-center text-base">
@@ -76,10 +76,10 @@ export default function GoldenPosition() {
           transition={{ duration: 1.5, delay: 0.2 }}
           className="text-center flex flex-col items-center absolute top-[10%] left-[70%] -translate-x-1/2 -translate-y-1/2"
         >
-          <h1 className="text-[60px] text-golden-gradient font-semibold">
+          <h1 className="text-[60px] text-golden-gradient font-semibold font-noto">
             VỊ TRÍ VÀNG
           </h1>
-          <div className="space-y-4 text-golden-gradient text-center text-[32px]">
+          <div className="space-y-4 text-golden-gradient text-center text-[32px] font-noto">
             <p>GIỮA LÒNG ĐÔ THỊ</p>
           </div>
         </motion.div>

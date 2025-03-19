@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @tailwind base;
@@ -31,6 +32,10 @@ body {
 
 .bg-blue-gradient {
   background: linear-gradient(180deg, #173370 0%, #2C61D6 100%) !important;
+}
+
+.bg-blue-gradient-reverse {
+  background: linear-gradient(180deg, #2C61D6 0%, #173370 100%) !important;
 }
 
 .bg-golden-gradient {
@@ -108,4 +113,14 @@ body {
 
 .font-handwriting {
   font-family: 'Dancing Script', cursive;
+}
+
+.font-noto {
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 89.2;
+
 }

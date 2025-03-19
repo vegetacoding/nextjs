@@ -16,13 +16,13 @@ export default function Overview() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="mx-auto p-8 max-w-[1440px] flex items-center sticky top-0 flex-col gap-4"
+          className="mx-auto p-8 max-w-[1440px] flex items-center sticky top-0 flex-col gap-12"
         >
           <h2 className="text-4xl font-light text-white">
             <span className="font-handwriting text-[70px] block mb-2">
               Tổng quan
             </span>
-            <span className=" ml-20 text-golden-gradient font-semibold text-[40px]">
+            <span className=" ml-20 text-golden-gradient font-semibold text-[40px] font-noto">
               DỰ ÁN
             </span>
           </h2>

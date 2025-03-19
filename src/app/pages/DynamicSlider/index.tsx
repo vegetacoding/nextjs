@@ -18,9 +18,9 @@ export default function DynamicSlider({
   title: string;
 }) {
   return (
-    <section className="w-screen bg-white py-16">
+    <section className="w-screen bg-white py-8">
       <div className="container mx-auto px-4 max-w-[1324px]">
-        <h2 className="text-[32px] font-bold text-blue-900 text-center mb-8">
+        <h2 className="text-[32px] font-bold text-blue-900 text-center mb-8 font-noto">
           {title}
         </h2>
         <div className="relative group">
@@ -44,7 +44,7 @@ export default function DynamicSlider({
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
             }}
-            className="w-full h-[600px] relative pb-12"
+            className="w-[70%] h-[600px] relative pb-12"
           >
             {images.map((image, index) => (
               <SwiperSlide key={index} className="relative">

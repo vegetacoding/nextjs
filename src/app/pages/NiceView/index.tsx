@@ -8,7 +8,7 @@ export default function NiceView() {
       id="home-page"
       className="h-screen w-screen snap-start relative overflow-hidden flex flex-col"
     >
-      <div className="bg-golden-gradient text-blue-gradient text-center py-3 text-3xl  h-[60px]">
+      <div className="bg-golden-gradient text-blue-gradient text-center py-3 text-3xl font-noto h-[60px]">
         SỐNG SANG - VIEW ĐẸP
       </div>
       <div className="">
