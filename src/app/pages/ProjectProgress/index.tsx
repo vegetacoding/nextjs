@@ -11,7 +11,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-const progressImages = ["/p1.png", "/p2.png", "/p3.png", "/p4.png", "/p5.png"];
+const progressImages = [
+  "/tiendo1.png",
+  "/tiendo2.png",
+  "/tiendo3.png",
+  "/tiendo4.png",
+];
 
 export default function ProjectProgress() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
