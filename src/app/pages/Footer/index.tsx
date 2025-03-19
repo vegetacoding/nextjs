@@ -50,7 +50,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-blue-gradient-reverse text-white py-12">
       <div className="container mx-auto px-4 max-w-[1320px]">
-        <div className="grid grid-cols-12 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
           {/* Logo Section */}
           <div className="col-span-4">
             <div className="flex items-center gap-4 mb-8">

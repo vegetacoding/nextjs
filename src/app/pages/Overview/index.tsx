@@ -27,7 +27,7 @@ export default function Overview() {
             </span>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ">
-            <div className="relative h-[656px]">
+            <div className="relative h-[400px] md:h-[656px]">
               <Image
                 src="/gioi-thieu.png"
                 alt="Tổng quan dự án"
@@ -110,7 +110,7 @@ export default function Overview() {
           transition={{ duration: 0.5 }}
           className="container mx-auto px-4 max-w-[1440px] relative z-10 "
         >
-          <div className="grid grid-cols-3  gap-8 gap-y-2 w-full text-white p-10">
+          <div className="grid grid-cols-1 md:grid-cols-3  gap-8 gap-y-2 w-full text-white p-10">
             {[
               {
                 icon: InformationCircleIcon,

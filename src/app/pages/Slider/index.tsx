@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import DynamicSlider from "../DynamicSlider";
+import { motion } from "framer-motion";
 
 const images = ["/slider1.png", "/slider2.png", "/slider3.png"];
 
@@ -64,16 +65,30 @@ export default function Slider() {
     <>
       <DynamicSlider images={images} title="TIỆN ÍCH TRONG THE OPUS ONE" />
       <section id="slider-2" className="w-screen bg-blue-gradient">
-        <div className="bg-golden-gradient pt-16">
-          <h2 className="text-[32px] font-bold text-center mb-8  text-blue-gradient max-w-[1324px] mx-auto font-noto">
+        <div className="bg-golden-gradient pt-10 sm:pt-16">
+          <motion.h2
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-[15px] sm:text-[20px] md:text-[32px] font-bold text-center mb-8 text-blue-gradient max-w-[1324px] mx-auto font-noto"
+          >
             MẶT BẰNG ĐIỂN HÌNH
-          </h2>
-          <div className="flex justify-center gap-1">
-            {Object.keys(buildingData).map((building) => (
-              <button
+          </motion.h2>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex justify-center gap-1"
+          >
+            {Object.keys(buildingData).map((building, index) => (
+              <motion.button
                 key={building}
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
                 onClick={() => setActiveBuilding(building)}
-                className={`px-8 py-2 rounded-t-lg text-lg font-medium transition-all
+                className={`px-8 py-2 rounded-t-lg text-[13px] sm:text-[20px] md:text-lg font-medium transition-all
                   ${
                     activeBuilding === building
                       ? "bg-white text-[#0F3581]"
@@ -82,13 +97,18 @@ export default function Slider() {
                 `}
               >
                 Tòa {building}
-              </button>
+              </motion.button>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         <div className="px-4 mx-auto max-w-[1324px] bg-transparent">
-          <div className="group bg-transparent rounded-lg p-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="group bg-transparent rounded-lg p-8"
+          >
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={30}
@@ -132,7 +152,13 @@ export default function Slider() {
             </Swiper>
 
             {/* Custom Navigation Buttons */}
-            <button className="swiper-button-prev-2 absolute top-1/2 -translate-y-1/2 -left-16 z-10 w-8 h-14 flex items-center justify-center ">
+            <motion.button
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ scale: 1.1 }}
+              className="swiper-button-prev-2 absolute top-1/2 -translate-y-1/2 -left-16 z-10 w-8 h-14 flex items-center justify-center"
+            >
               <svg
                 width="24"
                 height="44"
@@ -148,8 +174,14 @@ export default function Slider() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
-            <button className="swiper-button-next-2 absolute top-1/2 -translate-y-1/2 -right-16 z-10 w-8 h-14 flex items-center justify-center">
+            </motion.button>
+            <motion.button
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ scale: 1.1 }}
+              className="swiper-button-next-2 absolute top-1/2 -translate-y-1/2 -right-16 z-10 w-8 h-14 flex items-center justify-center"
+            >
               <svg
                 width="24"
                 height="44"
@@ -165,8 +197,8 @@ export default function Slider() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
 
         <style jsx global>{`
@@ -201,11 +233,21 @@ export default function Slider() {
       </section>
       <section id="slider-3" className="w-screen bg-golden-gradient py-12">
         <div className="container mx-auto px-4 max-w-[1440px]">
-          <h2 className="text-[32px] font-bold text-center mb-8 text-[#0F3581] font-noto">
+          <motion.h2
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-[15px] sm:text-[20px] md:text-[32px] font-bold text-center mb-8 text-[#0F3581] font-noto"
+          >
             MẶT BẰNG CĂN HỘ THE OPUS ONE
-          </h2>
+          </motion.h2>
 
-          <div className="bg-golden-gradient rounded-lg px-16">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="bg-golden-gradient rounded-lg px-4 sm:px-16"
+          >
             <Swiper
               modules={[Navigation]}
               spaceBetween={30}
@@ -220,9 +262,14 @@ export default function Slider() {
             >
               {apartmentData.map((apartment, index) => (
                 <SwiperSlide key={index}>
-                  <div className="grid grid-cols-2 gap-16 text-blue-gradient">
-                    <div className="flex-1">
-                      <div className="relative w-full h-[400px]">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 text-blue-gradient">
+                    <motion.div
+                      initial={{ x: -30, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.8 }}
+                      className="flex-1"
+                    >
+                      <div className="relative w-full h-[200px] sm:h-[400px]">
                         <Image
                           src={apartment.image}
                           alt={apartment.title}
@@ -231,19 +278,48 @@ export default function Slider() {
                           priority
                         />
                       </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="w-[425px]">
-                      <h4 className="text-3xl text-blue-gradient mb-4 font-noto">
+                    <motion.div
+                      initial={{ x: 30, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.8 }}
+                      className="w-full lg:w-[425px]"
+                    >
+                      <motion.h4
+                        initial={{ y: 20, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="text-3xl text-blue-gradient mb-4 font-noto"
+                      >
                         {apartment.title}
-                      </h4>
-                      <div className="text-black text-lg font-medium tracking-wider mb-4">
+                      </motion.h4>
+                      <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="text-black text-lg font-medium tracking-wider mb-4"
+                      >
                         THÔNG TIN CĂN HỘ
-                      </div>
-                      <div className="flex flex-col gap-4 py-5 border-t border-b border-[#152F68]">
+                      </motion.div>
+                      <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        className="flex flex-col gap-4 py-5 border-t border-b border-[#152F68]"
+                      >
                         {Object.entries(apartment.info).map(
                           ([key, value], idx) => (
-                            <div key={idx} className="flex items-center gap-2">
+                            <motion.div
+                              key={idx}
+                              initial={{ y: 20, opacity: 0 }}
+                              whileInView={{ y: 0, opacity: 1 }}
+                              transition={{
+                                duration: 0.6,
+                                delay: 0.5 + idx * 0.1,
+                              }}
+                              className="flex items-center gap-2"
+                            >
                               <div className="flex justify-between w-full border-b border-white/20 pb-2">
                                 <span className="text-black text-xl flex items-center gap-2">
                                   <div className="w-2 h-2 rounded-full bg-[#0F3581]" />
@@ -253,19 +329,27 @@ export default function Slider() {
                                   {value}
                                 </span>
                               </div>
-                            </div>
+                            </motion.div>
                           )
                         )}
-                      </div>
-                    </div>
+                      </motion.div>
+                    </motion.div>
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
 
             {/* Navigation button */}
-            <div className="flex justify-center items-center gap-6 mt-8">
-              <button className="swiper-button-prev-3 w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity ">
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="flex justify-center items-center gap-6 mt-8"
+            >
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                className="swiper-button-prev-3 w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity"
+              >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M15 6L9 12L15 18"
@@ -275,12 +359,15 @@ export default function Slider() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </button>
+              </motion.button>
               <div className="text-blue-gradient text-xl font-medium tracking-wider">
                 {String(currentSlide + 1).padStart(2, "0")}/
                 {String(apartmentData.length).padStart(2, "0")}
               </div>
-              <button className="swiper-button-next-3 w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                className="swiper-button-next-3 w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity"
+              >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M9 6L15 12L9 18"
@@ -290,9 +377,9 @@ export default function Slider() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </button>
-            </div>
-          </div>
+              </motion.button>
+            </motion.div>
+          </motion.div>
         </div>
 
         <style jsx global>{`
@@ -312,25 +399,57 @@ export default function Slider() {
       </section>
       <section
         id="premium"
-        className="w-screen h-[712px] bg-blue-gradient py-16 relative overflow-hidden"
+        className="w-screen h-[712px] md-[900px] xl:h-[712px] bg-blue-gradient py-16 relative overflow-hidden"
       >
         <div className="container mx-auto px-4 max-w-[1440px] relative h-full">
-          <div className="flex flex-col items-end text-right text-white mt-16 pr-32">
-            <h2 className="text-[24px] font-bold mb-2 text-golden-gradient font-noto">
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-end text-right text-white mt-16 pr-16 md:pr-32"
+          >
+            <motion.h2
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-[20px] sm:text-[24px] font-bold mb-2 text-golden-gradient font-noto"
+            >
               TIÊU CHUẨN BÀN GIAO
-            </h2>
-            <h1 className="text-[48px] font-bold text-golden-gradient mb-2 font-noto">
+            </motion.h2>
+            <motion.h1
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-[30px] sm:text-[48px] font-bold text-golden-gradient mb-2 font-noto"
+            >
               CAO CẤP BẬC NHẤT
-            </h1>
-            <h3 className="text-[28px] font-bold mb-8 text-golden-gradient font-noto">
+            </motion.h1>
+            <motion.h3
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-[20px] sm:text-[28px] font-bold mb-8 text-golden-gradient font-noto"
+            >
               VINHOMES GRAND PARK
-            </h3>
-            <button className="bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20">
+            </motion.h3>
+            <motion.button
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="z-[9999] bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20"
+            >
               ĐĂNG KÝ NHẬN THÔNG TIN
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
 
-          <div className="absolute bottom-0 left-0">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="absolute bottom-0 left-0"
+          >
             <Image
               src="/image21.png"
               alt="Premium Sofa"
@@ -339,7 +458,7 @@ export default function Slider() {
               className="object-contain"
               priority
             />
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

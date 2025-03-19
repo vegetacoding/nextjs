@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -20,10 +21,20 @@ export default function DynamicSlider({
   return (
     <section className="w-screen bg-white py-8">
       <div className="container mx-auto px-4 max-w-[1324px]">
-        <h2 className="text-[32px] font-bold text-blue-900 text-center mb-8 font-noto">
+        <motion.h2
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-[15px] sm:text-[20px] md:text-[32px] font-bold text-blue-900 text-center mb-8 font-noto"
+        >
           {title}
-        </h2>
-        <div className="relative group">
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="relative group"
+        >
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
@@ -48,7 +59,12 @@ export default function DynamicSlider({
           >
             {images.map((image, index) => (
               <SwiperSlide key={index} className="relative">
-                <div className="relative w-full h-full">
+                <motion.div
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                  className="relative w-full h-full"
+                >
                   <Image
                     src={image}
                     alt={`Tiện ích ${index + 1}`}
@@ -56,13 +72,19 @@ export default function DynamicSlider({
                     className="object-cover rounded-lg"
                     priority={index === 0}
                   />
-                </div>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
 
           {/* Custom Navigation Buttons */}
-          <button className="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-16 z-10 w-8 h-14 flex items-center justify-center">
+          <motion.button
+            initial={{ x: 20, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            whileHover={{ scale: 1.1 }}
+            className="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-16 z-10 w-8 h-14 flex items-center justify-center"
+          >
             <svg
               width="24"
               height="44"
@@ -78,8 +100,14 @@ export default function DynamicSlider({
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
-          <button className="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-16 z-10 w-8 h-14 flex items-center justify-center">
+          </motion.button>
+          <motion.button
+            initial={{ x: -20, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            whileHover={{ scale: 1.1 }}
+            className="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-16 z-10 w-8 h-14 flex items-center justify-center"
+          >
             <svg
               width="24"
               height="44"
@@ -95,8 +123,8 @@ export default function DynamicSlider({
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
 
       <style jsx global>{`

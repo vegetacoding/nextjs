@@ -3,7 +3,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import DynamicSlider from "../DynamicSlider";
+import { motion } from "framer-motion";
+
 const images = ["/slider1.png", "/slider2.png", "/slider3.png"];
+
 export default function QuotationForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -48,9 +51,19 @@ export default function QuotationForm() {
     <>
       <section className="w-screen bg-white py-16">
         <div className="container mx-auto px-4 max-w-[1320px] bg-white">
-          <div className="bg-[#FFE9B7] rounded-lg shadow-lg overflow-hidden">
-            <div className="grid grid-cols-2">
-              <div className="relative h-[500px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-[#FFE9B7] rounded-lg shadow-lg overflow-hidden"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+              <motion.div
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="relative h-[500px] hidden md:block"
+              >
                 <Image
                   src="/image31.png"
                   alt="The Opus One"
@@ -58,16 +71,43 @@ export default function QuotationForm() {
                   className="object-cover"
                   priority
                 />
-              </div>
+              </motion.div>
 
-              <div className="p-8">
-                <h2 className="text-[#0F3581] text-2xl font-bold mb-2">
+              <motion.div
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="p-8"
+              >
+                <motion.h2
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-[#0F3581] text-2xl font-bold mb-2"
+                >
                   NHẬN BÁO GIÁ
-                </h2>
-                <p className="text-[#0F3581] text-sm mb-1">TRỰC TIẾP TỪ CĐT</p>
+                </motion.h2>
+                <motion.p
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="text-[#0F3581] text-sm mb-1"
+                >
+                  TRỰC TIẾP TỪ CĐT
+                </motion.p>
 
-                <form onSubmit={handleSubmit} className="space-y-4 mt-6">
-                  <input
+                <motion.form
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  onSubmit={handleSubmit}
+                  className="space-y-4 mt-6"
+                >
+                  <motion.input
+                    initial={{ x: -30, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    whileFocus={{ scale: 1.02 }}
                     type="text"
                     name="name"
                     placeholder="Họ và tên (*)"
@@ -76,7 +116,11 @@ export default function QuotationForm() {
                     className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-[#0F3581] bg-white"
                     required
                   />
-                  <input
+                  <motion.input
+                    initial={{ x: -30, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    whileFocus={{ scale: 1.02 }}
                     type="tel"
                     name="phone"
                     placeholder="Số điện thoại (*)"
@@ -85,7 +129,11 @@ export default function QuotationForm() {
                     className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-[#0F3581] bg-white"
                     required
                   />
-                  <input
+                  <motion.input
+                    initial={{ x: -30, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
+                    whileFocus={{ scale: 1.02 }}
                     type="email"
                     name="email"
                     placeholder="Email"
@@ -94,55 +142,53 @@ export default function QuotationForm() {
                     className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-[#0F3581] bg-white"
                   />
 
-                  <div>
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                  >
                     <p className="text-[#0F3581] text-sm mb-2">
                       CĂN HỘ MONG MUỐN
                     </p>
                     <div className="grid grid-cols-4 gap-2">
-                      <label className="flex items-center space-x-2">
-                        <input
-                          type="checkbox"
-                          name="studio"
-                          checked={formData.type.studio}
-                          onChange={handleChange}
-                          className="form-checkbox text-[#0F3581]"
-                        />
-                        <span className="text-sm">Căn Studio</span>
-                      </label>
-                      <label className="flex items-center space-x-2">
-                        <input
-                          type="checkbox"
-                          name="1pn"
-                          checked={formData.type["1pn"]}
-                          onChange={handleChange}
-                          className="form-checkbox text-[#0F3581]"
-                        />
-                        <span className="text-sm">Căn 1PN+</span>
-                      </label>
-                      <label className="flex items-center space-x-2">
-                        <input
-                          type="checkbox"
-                          name="2pn"
-                          checked={formData.type["2pn"]}
-                          onChange={handleChange}
-                          className="form-checkbox text-[#0F3581]"
-                        />
-                        <span className="text-sm">Căn 2PN</span>
-                      </label>
-                      <label className="flex items-center space-x-2">
-                        <input
-                          type="checkbox"
-                          name="3pn"
-                          checked={formData.type["3pn"]}
-                          onChange={handleChange}
-                          className="form-checkbox text-[#0F3581]"
-                        />
-                        <span className="text-sm">Căn 3PN</span>
-                      </label>
+                      {[
+                        { name: "studio", label: "Căn Studio" },
+                        { name: "1pn", label: "Căn 1PN+" },
+                        { name: "2pn", label: "Căn 2PN" },
+                        { name: "3pn", label: "Căn 3PN" },
+                      ].map((item, index) => (
+                        <motion.label
+                          key={item.name}
+                          initial={{ scale: 0.9, opacity: 0 }}
+                          whileInView={{ scale: 1, opacity: 1 }}
+                          transition={{
+                            duration: 0.4,
+                            delay: 0.9 + index * 0.1,
+                          }}
+                          className="flex items-center space-x-2"
+                        >
+                          <input
+                            type="checkbox"
+                            name={item.name}
+                            checked={
+                              formData.type[
+                                item.name as keyof typeof formData.type
+                              ]
+                            }
+                            onChange={handleChange}
+                            className="form-checkbox text-[#0F3581]"
+                          />
+                          <span className="text-sm">{item.label}</span>
+                        </motion.label>
+                      ))}
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <textarea
+                  <motion.textarea
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1.3 }}
+                    whileFocus={{ scale: 1.02 }}
                     name="content"
                     placeholder="Nội dung"
                     value={formData.content}
@@ -151,24 +197,34 @@ export default function QuotationForm() {
                     className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-[#0F3581] resize-none bg-white"
                   />
 
-                  <div className="text-xs text-gray-600">
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1.4 }}
+                    className="text-xs text-gray-600"
+                  >
                     Bằng việc tiếp tục, bạn đã đồng ý với{" "}
                     <a href="#" className="text-[#0F3581] underline">
                       Chính sách bảo mật
                     </a>{" "}
                     của VinHomes.
-                  </div>
+                  </motion.div>
 
-                  <button
+                  <motion.button
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1.5 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     type="submit"
                     className="w-full py-3 bg-blue-gradient text-white font-bold rounded hover:bg-blue-gradient/90 transition-colors"
                   >
                     ĐĂNG KÝ NHẬN BÁO GIÁ
-                  </button>
-                </form>
-              </div>
+                  </motion.button>
+                </motion.form>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       <DynamicSlider images={images} title="HÌNH ẢNH CĂN HỘ MẪU" />
