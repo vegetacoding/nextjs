@@ -371,7 +371,7 @@ export default function Slider() {
               ))}
             </Swiper>
 
-            {/* Navigation */}
+            {/* Navigation button */}
             <div className="flex justify-center items-center gap-6 mt-8">
               <button className="swiper-button-prev-3 w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity ">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
