@@ -128,16 +128,19 @@ export default function HomePage() {
                 </svg>
               </motion.button>
             </div>
-
-            <a href="#quotation-form">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-[240px] button-padding rounded font-semibold text-base bg-golden-gradient cursor-pointer hidden xl:block"
-              >
-                <span className="text-blue-gradient">ĐĂNG KÝ NHẬN BÁO GIÁ</span>
-              </motion.button>
-            </a>
+            <div className="hidden xl:block">
+              <a href="#quotation-form">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-[240px] button-padding rounded font-semibold text-base bg-golden-gradient cursor-pointer hidden xl:block"
+                >
+                  <span className="text-blue-gradient">
+                    ĐĂNG KÝ NHẬN BÁO GIÁ
+                  </span>
+                </motion.button>
+              </a>
+            </div>
           </div>
         </div>
       </motion.header>
