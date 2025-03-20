@@ -10,7 +10,15 @@ import "swiper/css/pagination";
 import DynamicSlider from "../DynamicSlider";
 import { motion } from "framer-motion";
 
-const images = ["/slider1.png", "/slider2.png", "/slider3.png"];
+const images = [
+  "/tienich1.png",
+  "/tienich2.png",
+  "/tienich3.png",
+  "/tienich4.png",
+  "/tienich5.png",
+  "/tienich6.png",
+  "/tienich7.png",
+];
 
 // Dữ liệu cho các tòa nhà
 const buildingData = {
@@ -67,9 +75,9 @@ const apartmentData = [
     title: "CĂN HỘ 1 PHÒNG NGỦ",
     image: "/1PN.jpg",
     info: {
-      "Số phòng ngủ": "01",
-      "Diện tích thông thủy": "45,5 m2",
-      "Diện tích tim tường": "42,8 m2",
+      "Số phòng ngủ": "1+",
+      "Diện tích thông thủy": "48,6 m2",
+      "Diện tích tim tường": "53,3 m2",
     },
   },
   {
@@ -77,9 +85,9 @@ const apartmentData = [
     title: "CĂN HỘ 2 PHÒNG NGỦ",
     image: "/2PN.jpg",
     info: {
-      "Số phòng ngủ": "02",
-      "Diện tích thông thủy": "45,5 m2",
-      "Diện tích tim tường": "42,8 m2",
+      "Số phòng ngủ": "2",
+      "Diện tích thông thủy": "70,7 m2",
+      "Diện tích tim tường": "80,1 m2",
     },
   },
   {
@@ -87,9 +95,9 @@ const apartmentData = [
     title: "CĂN HỘ 3 PHÒNG NGỦ",
     image: "/3PN.jpg",
     info: {
-      "Số phòng ngủ": "03",
-      "Diện tích thông thủy": "45,5 m2",
-      "Diện tích tim tường": "42,8 m2",
+      "Số phòng ngủ": "3",
+      "Diện tích thông thủy": "91,2 m2",
+      "Diện tích tim tường": "100,2 m2",
     },
   },
   // Add more apartment types as needed
@@ -107,7 +115,7 @@ export default function Slider() {
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="text-[15px] sm:text-[20px] md:text-[32px] font-bold text-center mb-8 text-blue-gradient max-w-[1324px] mx-auto font-noto"
           >
             MẶT BẰNG ĐIỂN HÌNH
@@ -144,7 +152,7 @@ export default function Slider() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="group bg-transparent rounded-lg p-8"
           >
             <Swiper
@@ -274,7 +282,7 @@ export default function Slider() {
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="text-[15px] sm:text-[20px] md:text-[32px] font-bold text-center mb-8 text-[#0F3581] font-noto"
           >
             MẶT BẰNG CĂN HỘ THE OPUS ONE
@@ -283,7 +291,7 @@ export default function Slider() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="bg-golden-gradient rounded-lg px-4 sm:px-16"
           >
             <Swiper
@@ -304,7 +312,7 @@ export default function Slider() {
                     <motion.div
                       initial={{ x: -30, opacity: 0 }}
                       whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.8 }}
+                      transition={{ duration: 0.5 }}
                       className="flex-1"
                     >
                       <div className="relative w-full h-[200px] sm:h-[400px]">
@@ -321,7 +329,7 @@ export default function Slider() {
                     <motion.div
                       initial={{ x: 30, opacity: 0 }}
                       whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.8 }}
+                      transition={{ duration: 0.5 }}
                       className="w-full lg:w-[425px]"
                     >
                       <motion.h4
@@ -443,7 +451,7 @@ export default function Slider() {
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="flex flex-col items-end text-right text-white mt-16 pr-16 md:pr-32"
           >
             <motion.h2
@@ -485,7 +493,7 @@ export default function Slider() {
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="absolute bottom-0 left-0"
           >
             <Image

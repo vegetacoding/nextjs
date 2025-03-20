@@ -28,7 +28,7 @@ export default function Policy() {
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="flex flex-col gap-4 items-center justify-center"
           >
             <div className="flex">
@@ -90,7 +90,7 @@ export default function Policy() {
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
           >
             <motion.h2
               initial={{ y: 30, opacity: 0 }}

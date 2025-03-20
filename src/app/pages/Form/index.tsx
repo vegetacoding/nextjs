@@ -34,7 +34,7 @@ export default function Form() {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="bg-[#152F68] rounded-lg py-8 px-12 shadow-lg flex flex-col items-center"
           >
             <motion.h2
@@ -58,7 +58,7 @@ export default function Form() {
             <motion.form
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               onSubmit={handleSubmit}
               className="space-y-4 w-full"
             >
@@ -132,7 +132,7 @@ export default function Form() {
                 <motion.h2
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.5 }}
                   className="text-[15px] sm:text-[25px] xl:text-[40px] text-golden-gradient font-semibold font-noto"
                 >
                   TIỀM NĂNG TĂNG GIÁ DỰA TRÊN CƠ SỞ HẠ TẦNG
@@ -144,7 +144,7 @@ export default function Form() {
                 <motion.div
                   initial={{ x: -50, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.5 }}
                   className="hidden lg:flex flex-col w-[400px] "
                 >
                   <motion.div
@@ -228,7 +228,7 @@ export default function Form() {
                 <motion.h2
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.5 }}
                   className="text-[12px] sm:text-[25px] xl:text-[35px] text-golden-gradient font-semibold font-noto"
                 >
                   KHOẢNG CÁCH ĐẾN TRUNG TÂM - KẾT NỐI HOÀN HẢO
@@ -240,7 +240,7 @@ export default function Form() {
                 <motion.div
                   initial={{ x: -50, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.5 }}
                   className="flex flex-col items-start w-[50%]"
                 >
                   <motion.div
@@ -268,7 +268,7 @@ export default function Form() {
                 <motion.div
                   initial={{ x: 50, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
                   className="flex flex-col items-start w-[50%]"
                 >
                   <motion.div
@@ -319,7 +319,7 @@ export default function Form() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="relative w-full h-full overflow-hidden"
             >
               <Image
@@ -337,7 +337,7 @@ export default function Form() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="relative w-full h-full overflow-hidden"
             >
               <Image
@@ -359,7 +359,7 @@ export default function Form() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="relative w-full h-full overflow-hidden"
           >
             <Image

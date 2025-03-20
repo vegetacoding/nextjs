@@ -25,14 +25,14 @@ export default function GoldenPosition() {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="flex flex-col items-center pt-[20px] sm:pt-[30px] xl:pt-[50px] pb-16 justify-between h-full"
           >
             <div className="flex items-center space-x-4">
               <motion.h2
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className="text-[15px] sm:text-[25px] xl:text-[40px] text-golden-gradient font-semibold font-noto"
               >
                 ĐẲNG CẤP 5 SAO NGAY TRƯỚC THỀM NHÀ

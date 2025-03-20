@@ -29,7 +29,7 @@ export default function HomePage() {
         transition={{ duration: 5, ease: "easeInOut" }}
       >
         <Image
-          src="/banner.png"
+          src="/banner.jpg"
           alt="The Opus One Banner"
           fill
           className="object-cover"
@@ -64,25 +64,38 @@ export default function HomePage() {
                 href="#home-page"
                 className="text-white hover:text-primary-400 relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
               >
-                Trang chủ
+                TRANG CHỦ
               </a>
               <a
                 href="#overview"
                 className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
               >
-                Tổng quan
+                TỔNG QUAN
               </a>
               <a
-                href="#location"
+                href="#handover"
                 className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
               >
-                Vị trí
+                BÀN GIAO
               </a>
+
               <a
                 href="#utilities"
                 className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
               >
-                Tiện ích
+                TIỆN ÍCH
+              </a>
+              <a
+                href="#progress"
+                className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                TIẾN ĐỘ
+              </a>
+              <a
+                href="#policy"
+                className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                CHÍCH SÁCH BÁN HÀNG
               </a>
             </div>
 
@@ -179,28 +192,42 @@ export default function HomePage() {
                   onClick={toggleMobileMenu}
                   className="text-white text-xl hover:text-primary-400"
                 >
-                  Trang chủ
+                  TRANG CHỦ
                 </a>
                 <a
                   href="#overview"
                   onClick={toggleMobileMenu}
                   className="text-white text-xl hover:text-primary-400"
                 >
-                  Tổng quan
+                  TỔNG QUAN
                 </a>
                 <a
-                  href="#location"
+                  href="#handover"
                   onClick={toggleMobileMenu}
                   className="text-white text-xl hover:text-primary-400"
                 >
-                  Vị trí
+                  BÀN GIAO
                 </a>
                 <a
                   href="#utilities"
                   onClick={toggleMobileMenu}
                   className="text-white text-xl hover:text-primary-400"
                 >
-                  Tiện ích
+                  TIỆN ÍCH
+                </a>
+                <a
+                  href="#progress"
+                  onClick={toggleMobileMenu}
+                  className="text-white text-xl hover:text-primary-400"
+                >
+                  TIẾN ĐỘ
+                </a>
+                <a
+                  href="#policy"
+                  onClick={toggleMobileMenu}
+                  className="text-white text-xl hover:text-primary-400"
+                >
+                  CHÍCH SÁCH BÁN HÀNG
                 </a>
                 <motion.button
                   whileHover={{ scale: 1.05 }}

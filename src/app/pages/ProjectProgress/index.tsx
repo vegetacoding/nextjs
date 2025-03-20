@@ -27,7 +27,7 @@ export default function ProjectProgress() {
         <motion.h2
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="text-[#0F3581] text-3xl font-bold text-center mb-8"
         >
           HÌNH ẢNH TIẾN ĐỘ DỰ ÁN
@@ -37,7 +37,7 @@ export default function ProjectProgress() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="relative"
         >
           <Swiper
@@ -51,7 +51,7 @@ export default function ProjectProgress() {
                 <motion.div
                   initial={{ opacity: 0, scale: 1.1 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.5 }}
                   className="relative w-full h-[600px] rounded-lg overflow-hidden"
                 >
                   <Image
@@ -118,7 +118,7 @@ export default function ProjectProgress() {
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Swiper
             onSwiper={setThumbsSwiper}

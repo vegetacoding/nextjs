@@ -24,7 +24,7 @@ export default function DynamicSlider({
         <motion.h2
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="text-[15px] sm:text-[20px] md:text-[32px] font-bold text-blue-900 text-center mb-8 font-noto"
         >
           {title}
@@ -62,7 +62,7 @@ export default function DynamicSlider({
                 <motion.div
                   initial={{ opacity: 0, scale: 1.1 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.5 }}
                   className="relative w-full h-full"
                 >
                   <Image

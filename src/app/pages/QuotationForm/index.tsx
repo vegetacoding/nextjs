@@ -75,14 +75,14 @@ export default function QuotationForm() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="bg-[#FFE9B7] rounded-lg shadow-lg overflow-hidden"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 items-center">
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.5 }}
                 className="relative h-[500px] hidden md:block"
               >
                 <Image
@@ -97,7 +97,7 @@ export default function QuotationForm() {
               <motion.div
                 initial={{ x: 50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.5 }}
                 className="p-8"
               >
                 <motion.h2
@@ -120,7 +120,7 @@ export default function QuotationForm() {
                 <motion.form
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
                   onSubmit={handleSubmit}
                   className="space-y-4 mt-6"
                 >

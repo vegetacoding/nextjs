@@ -71,7 +71,7 @@ export default function Top10() {
             <motion.h2
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="text-[35px] sm:text-[45px] mb-12 font-bold text-golden-gradient font-noto"
             >
               TOP 10 LÝ DO SỞ HỮU
@@ -83,7 +83,7 @@ export default function Top10() {
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="w-full lg:w-[33%] space-y-6"
             >
               {reasonsData.slice(0, 5).map((reason, index) => (
@@ -129,7 +129,7 @@ export default function Top10() {
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="w-[500px] hidden lg:flex flex-col items-center justify-center gap-4"
             >
               <motion.h2
@@ -161,7 +161,7 @@ export default function Top10() {
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="w-full lg:w-[33%] space-y-6"
             >
               {reasonsData.slice(5).map((reason, index) => (
@@ -214,7 +214,7 @@ export default function Top10() {
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="w-full lg:w-1/2 text-white"
             >
               <motion.h3
@@ -328,7 +328,7 @@ export default function Top10() {
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="w-1/2 justify-center items-center hidden lg:flex"
             >
               <Image

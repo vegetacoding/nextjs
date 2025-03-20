@@ -13,7 +13,7 @@ export default function NiceView() {
         initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         className="bg-golden-gradient text-blue-gradient text-center py-3 sm:py-3 text-2xl sm:text-3xl font-noto h-[60px]"
       >
         SỐNG SANG - VIEW ĐẸP
