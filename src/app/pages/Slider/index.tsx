@@ -9,6 +9,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import DynamicSlider from "../DynamicSlider";
 import { motion } from "framer-motion";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 const images = [
   "/tienich1.png",
@@ -106,6 +108,8 @@ const apartmentData = [
 export default function Slider() {
   const [activeBuilding, setActiveBuilding] = useState("OS2");
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
 
   return (
     <>
@@ -184,7 +188,13 @@ export default function Slider() {
                 activeBuilding as keyof typeof buildingData
               ].images.map((image: string, index: number) => (
                 <SwiperSlide key={index} className="relative">
-                  <div className="relative w-full h-full">
+                  <div
+                    className="relative w-full h-full cursor-pointer"
+                    onClick={() => {
+                      setPhotoIndex(index);
+                      setIsOpen(true);
+                    }}
+                  >
                     <Image
                       src={image}
                       alt={`${
@@ -250,6 +260,51 @@ export default function Slider() {
             </motion.button>
           </motion.div>
         </div>
+
+        {isOpen && (
+          <Lightbox
+            mainSrc={
+              buildingData[activeBuilding as keyof typeof buildingData].images[
+                photoIndex
+              ]
+            }
+            nextSrc={
+              buildingData[activeBuilding as keyof typeof buildingData].images[
+                (photoIndex + 1) %
+                  buildingData[activeBuilding as keyof typeof buildingData]
+                    .images.length
+              ]
+            }
+            prevSrc={
+              buildingData[activeBuilding as keyof typeof buildingData].images[
+                (photoIndex +
+                  buildingData[activeBuilding as keyof typeof buildingData]
+                    .images.length -
+                  1) %
+                  buildingData[activeBuilding as keyof typeof buildingData]
+                    .images.length
+              ]
+            }
+            onCloseRequest={() => setIsOpen(false)}
+            onMovePrevRequest={() =>
+              setPhotoIndex(
+                (photoIndex +
+                  buildingData[activeBuilding as keyof typeof buildingData]
+                    .images.length -
+                  1) %
+                  buildingData[activeBuilding as keyof typeof buildingData]
+                    .images.length
+              )
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex(
+                (photoIndex + 1) %
+                  buildingData[activeBuilding as keyof typeof buildingData]
+                    .images.length
+              )
+            }
+          />
+        )}
 
         <style jsx global>{`
           #slider-2 .swiper {
