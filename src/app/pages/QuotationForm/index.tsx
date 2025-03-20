@@ -58,7 +58,7 @@ export default function QuotationForm() {
 
   return (
     <>
-      <section id="quotation-form" className="w-screen bg-white py-16">
+      <section id="quotation-form" className="w-screen bg-white py-4 sm:py-16">
         <div className="container mx-auto px-4 max-w-[1320px] bg-white">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -66,12 +66,12 @@ export default function QuotationForm() {
             transition={{ duration: 0.5 }}
             className="bg-[#FFE9B7] rounded-lg shadow-lg overflow-hidden"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="relative h-[500px] hidden md:block"
+                className="relative h-[500px] hidden lg:block"
               >
                 <Image
                   src="/image31.png"
@@ -187,7 +187,9 @@ export default function QuotationForm() {
                             onChange={handleChange}
                             className="form-checkbox text-[#0F3581]"
                           />
-                          <span className="text-sm">{item.label}</span>
+                          <span className="text-sm text-black">
+                            {item.label}
+                          </span>
                         </motion.label>
                       ))}
                     </div>

@@ -115,7 +115,7 @@ export default function Slider() {
         title="TIỆN ÍCH TRONG THE OPUS ONE"
       />
       <section id="utilities" className="w-screen bg-blue-gradient">
-        <div className="bg-golden-gradient pt-10 sm:pt-16">
+        <div className="bg-golden-gradient pt-8 sm:pt-16">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -281,7 +281,10 @@ export default function Slider() {
           }
         `}</style>
       </section>
-      <section id="slider-3" className="w-screen bg-golden-gradient py-12">
+      <section
+        id="slider-3"
+        className="w-screen bg-golden-gradient py-8 md:py-12"
+      >
         <div className="container mx-auto px-4 max-w-[1440px]">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}

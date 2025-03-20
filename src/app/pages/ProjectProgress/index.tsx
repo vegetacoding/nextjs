@@ -22,13 +22,13 @@ export default function ProjectProgress() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
-    <section id="progress" className="w-screen bg-white py-16">
+    <section id="progress" className="w-screen bg-white py-4 sm:py-16">
       <div className="container mx-auto px-4 max-w-[1320px]">
         <motion.h2
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-[#0F3581] text-3xl font-bold text-center mb-8 font-noto"
+          className="text-[15px] sm:text-[20px] md:text-[32px] font-bold text-blue-900 text-center mb-8 font-noto"
         >
           HÌNH ẢNH TIẾN ĐỘ DỰ ÁN
         </motion.h2>
@@ -52,7 +52,7 @@ export default function ProjectProgress() {
                   initial={{ opacity: 0, scale: 1.1 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
-                  className="relative w-full h-[600px] rounded-lg overflow-hidden"
+                  className="relative w-full h-[300px] sm:h-[600px] rounded-lg overflow-hidden"
                 >
                   <Image
                     src={image}

@@ -71,7 +71,8 @@ export default function Footer() {
               href="tel:0353912856"
               className="inline-flex items-center gap-2 bg-white/10 rounded px-4 py-2 hover:bg-white/20 transition-colors"
             >
-              <PhoneIcon className="h-5 w-5" /> HOTLINE: +84 3539 12856
+              <PhoneIcon className="h-5 w-5" />
+              +84 3539 12856
             </Link>
             <div className="mt-6 space-y-3">
               {socialLinks.map((link, index) => (

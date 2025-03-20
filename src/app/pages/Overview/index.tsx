@@ -110,7 +110,7 @@ export default function Overview() {
           transition={{ duration: 0.5 }}
           className="container mx-auto px-4 max-w-[1440px] relative z-10 "
         >
-          <div className="grid grid-cols-1 lg:grid-cols-3  gap-8 gap-y-2 w-full text-white p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3  gap-8 gap-y-2 w-full text-white p-4 sm:p-10">
             {[
               {
                 icon: InformationCircleIcon,
@@ -187,12 +187,12 @@ export default function Overview() {
                   <div className="flex items-start gap-4 flex-col justify-center">
                     {item.showIcon ? (
                       <div className=" text-white rounded-lg group-hover:scale-110 transition-all">
-                        <item.icon className="h-[50px] md:h-[70px] w-[50px] md:w-[70px]" />
+                        <item.icon className="h-[30px] sm:h-[50px] md:h-[70px] w-[30px] sm:w-[50px] md:w-[70px]" />
                       </div>
                     ) : (
                       <div />
                     )}
-                    <h3 className="text-white text-xl md:text-2xl font-medium tracking-wide">
+                    <h3 className="text-white text-base sm:text-xl md:text-2xl font-medium tracking-wide">
                       {item.title}
                     </h3>
                   </div>
@@ -201,12 +201,12 @@ export default function Overview() {
                     <p
                       className={`${
                         item.highlight
-                          ? "text-golden-gradient font-semibold text-[25px] md:text-[28px]"
+                          ? "text-golden-gradient font-semibold text-base sm:text-[25px] md:text-[28px]"
                           : "text-white"
                       } ${
                         item.smallText
-                          ? "text-base md:text-xl leading-relaxed"
-                          : "text-xl md:text-2xl leading-relaxed"
+                          ? "text-sm sm:text-base md:text-xl leading-relaxed"
+                          : "text-base sm:text-xl md:text-2xl leading-relaxed"
                       }`}
                     >
                       {item.content}

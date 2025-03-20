@@ -57,7 +57,7 @@ export default function DynamicSlider({
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
             }}
-            className="w-[70%] h-[600px] relative pb-12"
+            className="w-[70%] h-[300px] sm:h-[600px] relative pb-12"
           >
             {images.map((image, index) => (
               <SwiperSlide key={index} className="relative">
@@ -85,7 +85,7 @@ export default function DynamicSlider({
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             whileHover={{ scale: 1.1 }}
-            className="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-16 z-10 w-8 h-14 flex items-center justify-center"
+            className="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-16 z-10 w-4 h-4 sm:w-14 sm:h-14 flex items-center justify-center"
           >
             <svg
               width="24"
@@ -108,7 +108,7 @@ export default function DynamicSlider({
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             whileHover={{ scale: 1.1 }}
-            className="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-16 z-10 w-8 h-14 flex items-center justify-center"
+            className="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-16 z-10 w-4 h-4 sm:w-14 sm:h-14 flex items-center justify-center"
           >
             <svg
               width="24"

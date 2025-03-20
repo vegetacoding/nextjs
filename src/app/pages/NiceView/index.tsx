@@ -14,7 +14,7 @@ export default function NiceView() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="bg-golden-gradient text-blue-gradient text-center py-1 md:py-3 text-lg sm:text-3xl font-noto flex items-center justify-center"
+        className="bg-golden-gradient text-blue-gradient text-center py-2 md:py-3 text-xl sm:text-3xl font-noto h-[50px] flex items-center justify-center"
       >
         SỐNG SANG - VIEW ĐẸP
       </motion.div>
