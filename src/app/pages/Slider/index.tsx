@@ -65,7 +65,7 @@ const apartmentData = [
   {
     id: 1,
     title: "CĂN HỘ STUDIO",
-    image: "/Stu.jpg",
+    image: "/can-ho-studio.png",
     info: {
       "Số phòng ngủ": "1",
       "Diện tích thông thủy": "33,2 m2",
@@ -75,7 +75,7 @@ const apartmentData = [
   {
     id: 2,
     title: "CĂN HỘ 1 PHÒNG NGỦ",
-    image: "/1PN.jpg",
+    image: "/can-ho-1pn.png",
     info: {
       "Số phòng ngủ": "1+",
       "Diện tích thông thủy": "48,6 m2",
@@ -85,7 +85,7 @@ const apartmentData = [
   {
     id: 3,
     title: "CĂN HỘ 2 PHÒNG NGỦ",
-    image: "/2PN.jpg",
+    image: "/can-ho-2pn.png",
     info: {
       "Số phòng ngủ": "2",
       "Diện tích thông thủy": "70,7 m2",
@@ -95,7 +95,7 @@ const apartmentData = [
   {
     id: 4,
     title: "CĂN HỘ 3 PHÒNG NGỦ",
-    image: "/3PN.jpg",
+    image: "/can-ho-3pn.png",
     info: {
       "Số phòng ngủ": "3",
       "Diện tích thông thủy": "91,2 m2",
@@ -545,7 +545,7 @@ export default function Slider() {
               whileInView={{ y: 0, opacity: 1 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="cursor-pointer z-[9999] bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20"
+              className="cursor-pointer z-[10] bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20"
             >
               ĐĂNG KÝ NHẬN THÔNG TIN
             </motion.button>

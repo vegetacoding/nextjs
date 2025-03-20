@@ -129,13 +129,15 @@ export default function HomePage() {
               </motion.button>
             </div>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-[240px] button-padding rounded font-semibold text-base bg-golden-gradient cursor-pointer hidden xl:block"
-            >
-              <span className="text-blue-gradient">ĐĂNG KÝ NHẬN BÁO GIÁ</span>
-            </motion.button>
+            <a href="#quotation-form">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-[240px] button-padding rounded font-semibold text-base bg-golden-gradient cursor-pointer hidden xl:block"
+              >
+                <span className="text-blue-gradient">ĐĂNG KÝ NHẬN BÁO GIÁ</span>
+              </motion.button>
+            </a>
           </div>
         </div>
       </motion.header>
@@ -234,16 +236,19 @@ export default function HomePage() {
                 >
                   CHÍCH SÁCH BÁN HÀNG
                 </a>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full button-padding rounded font-semibold text-base bg-golden-gradient cursor-pointer mt-4"
-                  onClick={toggleMobileMenu}
-                >
-                  <span className="text-blue-gradient">
-                    ĐĂNG KÝ NHẬN BÁO GIÁ
-                  </span>
-                </motion.button>
+
+                <a href="#quotation-form">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full button-padding rounded font-semibold text-base bg-golden-gradient cursor-pointer mt-4"
+                    onClick={toggleMobileMenu}
+                  >
+                    <span className="text-blue-gradient">
+                      ĐĂNG KÝ NHẬN BÁO GIÁ
+                    </span>
+                  </motion.button>
+                </a>
               </div>
             </motion.div>
           </motion.div>
