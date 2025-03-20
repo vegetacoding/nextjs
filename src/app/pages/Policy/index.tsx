@@ -9,6 +9,7 @@ const policyData = ["/1.png", "/2.png", "/3.png", "/4.png", "/5.png", "/6.png"];
 
 export default function Policy() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPriceModalOpen, setIsPriceModalOpen] = useState(false);
 
   return (
     <section id="policy" className="w-screen relative">
@@ -84,6 +85,7 @@ export default function Policy() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => setIsPriceModalOpen(true)}
                 className="w-full border-2 bg-transparent border-blue-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:bg-blue-gradient hover:text-white transition-all"
               >
                 & BẢNG GIÁ CHI TIẾT
@@ -154,6 +156,59 @@ export default function Policy() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsModalOpen(false)}
+                className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L13 13M1 13L13 1"
+                    stroke="#0F3581"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </motion.button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isPriceModalOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]"
+              onClick={() => setIsPriceModalOpen(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.75, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.75, y: 20 }}
+              transition={{ duration: 0.3 }}
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[70] w-full max-w-[650px] p-4"
+            >
+              <DynamicForm
+                title="ĐĂNG KÝ NHẬN BẢNG GIÁ"
+                subtitle="TRỰC TIẾP TỪ CĐT"
+                buttonText="ĐĂNG KÝ NHẬN BẢNG GIÁ"
+              />
+              <motion.button
+                initial={{ opacity: 0, scale: 0.75 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.75 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setIsPriceModalOpen(false)}
                 className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg"
               >
                 <svg

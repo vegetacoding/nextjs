@@ -540,15 +540,17 @@ export default function Slider() {
             >
               VINHOMES GRAND PARK
             </motion.h3>
-            <motion.button
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="cursor-pointer z-[10] bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20"
-            >
-              ĐĂNG KÝ NHẬN THÔNG TIN
-            </motion.button>
+            <a href="#registration-form-1">
+              <motion.button
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="cursor-pointer z-[10] bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20"
+              >
+                ĐĂNG KÝ NHẬN THÔNG TIN
+              </motion.button>
+            </a>
           </motion.div>
 
           <motion.div
