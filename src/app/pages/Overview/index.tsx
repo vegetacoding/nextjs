@@ -221,16 +221,18 @@ export default function Overview() {
               </motion.div>
             ))}
           </div>
-          <motion.div
-            className="flex justify-center mt-4 md:mt-12"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}
-          >
-            <button className="scale-90 md:scale-100 bg-golden-gradient text-blue-900 font-bold py-2 md:py-4 px-6 md:px-8 rounded-lg hover:opacity-90 transition-all text-base md:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-              NHẬN BROCHURE DỰ ÁN QUA ZALO/VIBER
-            </button>
-          </motion.div>
+          <a href="https://zalo.me/0353912856">
+            <motion.div
+              className="flex justify-center mt-4 md:mt-12"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1 }}
+            >
+              <button className=" cursor-pointer scale-90 md:scale-100 bg-golden-gradient text-blue-900 font-bold py-2 md:py-4 px-6 md:px-8 rounded-lg hover:opacity-90 transition-all text-base md:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                NHẬN BROCHURE DỰ ÁN QUA ZALO/VIBER
+              </button>
+            </motion.div>
+          </a>
         </motion.div>
 
         <div className="">
