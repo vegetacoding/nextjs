@@ -39,9 +39,9 @@ export default function Home() {
           whileTap={{ scale: 0.95 }}
           className="fixed bottom-8 right-8 w-[316px] h-[53px] z-50 text-base font-medium bg-blue-gradient rounded-[60px] border-golden-gradient cursor-pointer"
         >
-          <span className="text-golden-gradient">
+          <a href="#quotation-form" className="text-golden-gradient">
             ĐĂNG KÝ THAM QUAN NHÀ MẪU
-          </span>
+          </a>
         </motion.button>
 
         <Overview />
