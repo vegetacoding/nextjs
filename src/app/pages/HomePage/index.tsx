@@ -47,7 +47,7 @@ export default function HomePage() {
         className="relative z-50 pt-10 px-8"
       >
         <div className="container mx-auto px-4 max-w-[1440px]">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-20 xl:bg-black/10 xl:backdrop-blur-sm xl:px-8 xl:rounded-full xl:shadow-[0_0_20px_rgba(0,0,0,0.3)]">
             <Link href="/" className="flex items-center">
               <Image
                 src="/logo.png"
@@ -62,45 +62,45 @@ export default function HomePage() {
             <div className="hidden xl:flex space-x-8">
               <a
                 href="#home-page"
-                className="text-white hover:text-white relative group"
+                className="text-white hover:text-white relative group font-medium"
               >
-                <span>TRANG CHỦ</span>
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                <span className="relative z-10">TRANG CHỦ</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-golden-gradient origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
                 href="#overview"
-                className="text-white hover:text-white relative group"
+                className="text-white hover:text-white relative group font-medium"
               >
-                <span>TỔNG QUAN</span>
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                <span className="relative z-10">TỔNG QUAN</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-golden-gradient origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
                 href="#handover"
-                className="text-white hover:text-white relative group"
+                className="text-white hover:text-white relative group font-medium"
               >
-                <span>BÀN GIAO</span>
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                <span className="relative z-10">BÀN GIAO</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-golden-gradient origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
                 href="#utilities"
-                className="text-white hover:text-white relative group"
+                className="text-white hover:text-white relative group font-medium"
               >
-                <span>TIỆN ÍCH</span>
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                <span className="relative z-10">TIỆN ÍCH</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-golden-gradient origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
                 href="#progress"
-                className="text-white hover:text-white relative group"
+                className="text-white hover:text-white relative group font-medium"
               >
-                <span>TIẾN ĐỘ</span>
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                <span className="relative z-10">TIẾN ĐỘ</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-golden-gradient origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
                 href="#policy"
-                className="text-white hover:text-white relative group"
+                className="text-white hover:text-white relative group font-medium"
               >
-                <span>CHÍCH SÁCH BÁN HÀNG</span>
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                <span className="relative z-10">CHÍCH SÁCH BÁN HÀNG</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-golden-gradient origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
             </div>
 
@@ -133,7 +133,7 @@ export default function HomePage() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-[240px] button-padding rounded font-semibold text-base bg-golden-gradient cursor-pointer hidden xl:block"
+                  className="w-[240px] button-padding rounded-full font-semibold text-base bg-golden-gradient cursor-pointer hidden xl:block"
                 >
                   <span className="text-blue-gradient">
                     ĐĂNG KÝ NHẬN BÁO GIÁ
