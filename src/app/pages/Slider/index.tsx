@@ -543,10 +543,9 @@ export default function Slider() {
             <motion.button
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="z-[9999] bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20"
+              className="cursor-pointer z-[9999] bg-golden-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mt-20"
             >
               ĐĂNG KÝ NHẬN THÔNG TIN
             </motion.button>
