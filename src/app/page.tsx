@@ -29,16 +29,6 @@ export default function Home() {
             x: 0,
             rotate: [0, -5, 5, -5, 5, 0],
           }}
-          transition={{
-            duration: 0.5,
-            delay: 0.5,
-            rotate: {
-              duration: 0.5,
-              repeat: Infinity,
-              repeatDelay: 2,
-              ease: "easeInOut",
-            },
-          }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsModalOpen(true)}
