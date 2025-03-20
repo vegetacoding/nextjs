@@ -59,48 +59,53 @@ export default function HomePage() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex space-x-8">
+            <div className="hidden xl:flex space-x-8">
               <a
                 href="#home-page"
-                className="text-white hover:text-primary-400 relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white hover:text-white relative group"
               >
-                TRANG CHỦ
+                <span>TRANG CHỦ</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
                 href="#overview"
-                className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white hover:text-white relative group"
               >
-                TỔNG QUAN
+                <span>TỔNG QUAN</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
                 href="#handover"
-                className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white hover:text-white relative group"
               >
-                BÀN GIAO
+                <span>BÀN GIAO</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
-
               <a
                 href="#utilities"
-                className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white hover:text-white relative group"
               >
-                TIỆN ÍCH
+                <span>TIỆN ÍCH</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
                 href="#progress"
-                className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white hover:text-white relative group"
               >
-                TIẾN ĐỘ
+                <span>TIẾN ĐỘ</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
                 href="#policy"
-                className="text-white hover:text-primary-400  relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary-400 after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white hover:text-white relative group"
               >
-                CHÍCH SÁCH BÁN HÀNG
+                <span>CHÍCH SÁCH BÁN HÀNG</span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white origin-center transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
             </div>
 
             {/* Mobile Menu Toggle */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <motion.button
                 onClick={toggleMobileMenu}
                 whileHover={{ scale: 1.1 }}
@@ -127,7 +132,7 @@ export default function HomePage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-[240px] button-padding rounded font-semibold text-base bg-golden-gradient cursor-pointer hidden lg:block"
+              className="w-[240px] button-padding rounded font-semibold text-base bg-golden-gradient cursor-pointer hidden xl:block"
             >
               <span className="text-blue-gradient">ĐĂNG KÝ NHẬN BÁO GIÁ</span>
             </motion.button>
@@ -190,42 +195,42 @@ export default function HomePage() {
                 <a
                   href="#home-page"
                   onClick={toggleMobileMenu}
-                  className="text-white text-xl hover:text-primary-400"
+                  className="text-white text-xl hover:text-white"
                 >
                   TRANG CHỦ
                 </a>
                 <a
                   href="#overview"
                   onClick={toggleMobileMenu}
-                  className="text-white text-xl hover:text-primary-400"
+                  className="text-white text-xl hover:text-white"
                 >
                   TỔNG QUAN
                 </a>
                 <a
                   href="#handover"
                   onClick={toggleMobileMenu}
-                  className="text-white text-xl hover:text-primary-400"
+                  className="text-white text-xl hover:text-white"
                 >
                   BÀN GIAO
                 </a>
                 <a
                   href="#utilities"
                   onClick={toggleMobileMenu}
-                  className="text-white text-xl hover:text-primary-400"
+                  className="text-white text-xl hover:text-white"
                 >
                   TIỆN ÍCH
                 </a>
                 <a
                   href="#progress"
                   onClick={toggleMobileMenu}
-                  className="text-white text-xl hover:text-primary-400"
+                  className="text-white text-xl hover:text-white"
                 >
                   TIẾN ĐỘ
                 </a>
                 <a
                   href="#policy"
                   onClick={toggleMobileMenu}
-                  className="text-white text-xl hover:text-primary-400"
+                  className="text-white text-xl hover:text-white"
                 >
                   CHÍCH SÁCH BÁN HÀNG
                 </a>

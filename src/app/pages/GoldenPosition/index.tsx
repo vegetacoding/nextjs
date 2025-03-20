@@ -26,14 +26,14 @@ export default function GoldenPosition() {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col items-center pt-[20px] sm:pt-[30px] xl:pt-[50px] pb-16 justify-between h-full"
+            className="flex flex-col items-center pt-[15px] sm:pt-[30px] lg:pt-[45px] xl:pt-[55px] pb-16 justify-between h-full"
           >
             <div className="flex items-center space-x-4">
               <motion.h2
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="text-[15px] sm:text-[25px] xl:text-[40px] text-golden-gradient font-semibold font-noto"
+                className="text-[12px] sm:text-[25px] xl:text-[40px] text-golden-gradient font-semibold font-noto"
               >
                 ĐẲNG CẤP 5 SAO NGAY TRƯỚC THỀM NHÀ
               </motion.h2>
@@ -43,7 +43,7 @@ export default function GoldenPosition() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 0.2 }}
-              className="mt-8 text-center flex flex-col items-center font-noto scale-35 sm:scale-50 lg:scale-80 xl:scale-100"
+              className="w-full mt-8 sm:mt-16 md:mt-32 lg:mt-8 text-center flex flex-col items-center font-noto scale-50 md:scale-60 lg:scale-80 xl:scale-100"
             >
               <h1 className="text-[40px] text-golden-gradient mb-6 font-semibold font-noto">
                 THE OPUS ONE
@@ -64,7 +64,7 @@ export default function GoldenPosition() {
       </section>
       <section
         id="golden-position-2"
-        className="w-screen bg-transparent relative mt-20"
+        className="w-screen bg-transparent relative mt-32 sm:mt-20"
       >
         <div className="">
           <Image
@@ -79,12 +79,12 @@ export default function GoldenPosition() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.2 }}
-          className="text-center flex flex-col items-center absolute top-[10%] left-[65%]  md:left-[70%] -translate-x-1/2 -translate-y-1/2"
+          className="text-center flex flex-col items-center absolute top-[10%] left-[65%] w-full md:left-[70%] -translate-x-1/2 -translate-y-1/2"
         >
-          <h1 className="text-[15px] sm:text-[40px] md:text-[60px] text-golden-gradient font-semibold font-noto">
+          <h1 className="text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] xl:text-[45px] text-golden-gradient font-semibold font-noto">
             VỊ TRÍ VÀNG
           </h1>
-          <div className="space-y-4 text-golden-gradient text-center text-[15px] sm:text-[24px] md:text-[32px] font-noto">
+          <div className="space-y-4 text-golden-gradient text-center text-[15px] sm:text-[20px] md:text-[30px] lg:text-[35px] xl:text-[40px] font-noto">
             <p>GIỮA LÒNG ĐÔ THỊ</p>
           </div>
         </motion.div>

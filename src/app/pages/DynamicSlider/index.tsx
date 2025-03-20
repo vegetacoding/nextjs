@@ -12,14 +12,16 @@ import "swiper/css/pagination";
 // const images = ["/slider1.png", "/slider2.png", "/slider3.png"];
 
 export default function DynamicSlider({
+  id,
   images = [],
   title = "TIỆN ÍCH TRONG THE OPUS ONE",
 }: {
+  id: string;
   images: string[];
   title: string;
 }) {
   return (
-    <section className="w-screen bg-white py-8">
+    <section id={id} className="w-screen bg-white py-8">
       <div className="container mx-auto px-4 max-w-[1324px]">
         <motion.h2
           initial={{ y: 30, opacity: 0 }}

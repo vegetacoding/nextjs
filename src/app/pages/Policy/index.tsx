@@ -7,7 +7,7 @@ const policyData = ["/1.png", "/2.png", "/3.png", "/4.png", "/5.png", "/6.png"];
 
 export default function Policy() {
   return (
-    <section className="w-screen relative">
+    <section id="policy" className="w-screen relative">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

@@ -7,6 +7,7 @@ import {
   UserGroupIcon,
   PlayCircleIcon,
   PhoneIcon,
+  ChatBubbleBottomCenterTextIcon,
 } from "@heroicons/react/24/outline";
 
 const socialLinks = [
@@ -14,6 +15,11 @@ const socialLinks = [
     icon: EnvelopeIcon,
     label: "minhtam.minhtamland@gmail.com",
     href: "mailto:minhtam.minhtamland@gmail.com",
+  },
+  {
+    icon: ChatBubbleBottomCenterTextIcon,
+    label: "Zalo",
+    href: "https://zalo.me/0353912856",
   },
   {
     icon: UserGroupIcon,
@@ -36,12 +42,12 @@ const addresses = [
   {
     title: "ĐỊA CHỈ DỰ ÁN",
     content:
-      "Khu dân cư và công viên Phước Thiện, Phường Long Bình và Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM",
+      "The Opus One, Vinhomes Grand Park, Phường Long Bình và Long Thạnh Mỹ, TP Thủ Đức, TP.HCM",
   },
   {
     title: "ĐỊA CHỈ NHÀ MẪU",
     content:
-      "L3-01 (N301) và L4-01 (N401) Tầng 3, Trung tâm thương mại Vincom Mega Mall Thảo Điền, 161 Đường Võ Nguyên Giáp, P.Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
+      "Vinhomes Grand Park, Phường Long Bình và Long Thạnh Mỹ, TP Thủ Đức, TP.HCM",
   },
 ];
 

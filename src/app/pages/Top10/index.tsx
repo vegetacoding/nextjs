@@ -221,7 +221,7 @@ export default function Top10() {
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="font-script text-2xl mb-4 text-white font-handwriting text-[40px]"
+                className="font-script text-2xl mb-4 text-white font-handwriting text-[55px]"
               >
                 Đại lý phân phối
               </motion.h3>
@@ -231,10 +231,10 @@ export default function Top10() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex flex-col"
               >
-                <h2 className="text-lg font-bold text-golden-gradient">
+                <h2 className="text-xl font-bold text-golden-gradient">
                   ĐỘC QUYỀN CĂN HỘ
                 </h2>
-                <h1 className="text-[35px] font-bold text-golden-gradient mb-6">
+                <h1 className="text-[40px] font-bold text-golden-gradient mb-6">
                   THE OPUS ONE
                 </h1>
               </motion.div>

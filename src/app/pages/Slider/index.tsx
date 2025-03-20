@@ -65,7 +65,7 @@ const apartmentData = [
     title: "CĂN HỘ STUDIO",
     image: "/Stu.jpg",
     info: {
-      "Số phòng ngủ": "01",
+      "Số phòng ngủ": "1",
       "Diện tích thông thủy": "33,2 m2",
       "Diện tích tim tường": "29,2 m2",
     },
@@ -109,7 +109,11 @@ export default function Slider() {
 
   return (
     <>
-      <DynamicSlider images={images} title="TIỆN ÍCH TRONG THE OPUS ONE" />
+      <DynamicSlider
+        id="utilities"
+        images={images}
+        title="TIỆN ÍCH TRONG THE OPUS ONE"
+      />
       <section id="utilities" className="w-screen bg-blue-gradient">
         <div className="bg-golden-gradient pt-10 sm:pt-16">
           <motion.h2
@@ -134,7 +138,7 @@ export default function Slider() {
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
                 onClick={() => setActiveBuilding(building)}
-                className={`px-8 py-2 rounded-t-lg text-[13px] sm:text-[20px] md:text-lg font-medium transition-all
+                className={`px-4 md:px-8 py-2 rounded-t-lg text-[13px] sm:text-[20px] md:text-lg font-medium transition-all
                   ${
                     activeBuilding === building
                       ? "bg-white text-[#0F3581]"
@@ -174,7 +178,7 @@ export default function Slider() {
                 prevEl: ".swiper-button-prev-2",
                 nextEl: ".swiper-button-next-2",
               }}
-              className="w-full h-[600px] relative pb-12"
+              className="w-full h-[300px] sm:h-[600px] relative pb-12"
             >
               {buildingData[
                 activeBuilding as keyof typeof buildingData
@@ -444,7 +448,7 @@ export default function Slider() {
         `}</style>
       </section>
       <section
-        id="premium"
+        id="handover"
         className="w-screen h-[712px] md-[900px] xl:h-[712px] bg-blue-gradient py-16 relative overflow-hidden"
       >
         <div className="container mx-auto px-4 max-w-[1440px] relative h-full">
