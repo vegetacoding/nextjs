@@ -4,6 +4,9 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
+import { useState } from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -20,6 +23,9 @@ export default function DynamicSlider({
   images: string[];
   title: string;
 }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+
   return (
     <section id={id} className="w-screen bg-white py-8">
       <div className="container mx-auto px-4 max-w-[1324px]">
@@ -65,7 +71,11 @@ export default function DynamicSlider({
                   initial={{ opacity: 0, scale: 1.1 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
-                  className="relative w-full h-full"
+                  className="relative w-full h-full cursor-pointer"
+                  onClick={() => {
+                    setPhotoIndex(index);
+                    setIsOpen(true);
+                  }}
                 >
                   <Image
                     src={image}
@@ -128,6 +138,21 @@ export default function DynamicSlider({
           </motion.button>
         </motion.div>
       </div>
+
+      {isOpen && (
+        <Lightbox
+          mainSrc={images[photoIndex]}
+          nextSrc={images[(photoIndex + 1) % images.length]}
+          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+          onCloseRequest={() => setIsOpen(false)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + images.length - 1) % images.length)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % images.length)
+          }
+        />
+      )}
 
       <style jsx global>{`
         .swiper {
