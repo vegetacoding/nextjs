@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { submitGoogleSheet } from "@/app/server/google-sheets.action";
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -11,9 +12,19 @@ export default function Form() {
     product: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
+    try {
+      const { name, phone, product } = formData;
+      await submitGoogleSheet("thongtin", name, "", phone, product, "");
+      setFormData({
+        name: "",
+        phone: "",
+        product: "",
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -59,7 +70,7 @@ export default function Form() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              onSubmit={handleSubmit}
+              onSubmit={async (e) => await handleSubmit(e)}
               className="space-y-4 w-full"
             >
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -105,7 +116,7 @@ export default function Form() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   type="submit"
-                  className="w-full px-6 py-2 bg-golden-gradient text-blue-900 font-bold rounded hover:opacity-90 transition-all"
+                  className="cursor-pointer w-full px-6 py-2 bg-golden-gradient text-blue-900 font-bold rounded hover:opacity-90 transition-all"
                 >
                   ĐĂNG KÝ NGAY
                 </motion.button>

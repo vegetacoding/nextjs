@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import DynamicSlider from "../DynamicSlider";
 import { motion } from "framer-motion";
+import { submitGoogleSheet } from "@/app/server/google-sheets.action";
 
 const images = [
   "/mau/Copy of DSC05453.png",
@@ -30,9 +31,29 @@ export default function QuotationForm() {
     },
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
+    try {
+      const { name, phone, email, content, type } = formData;
+
+      let product = "";
+      if (type.studio) product += "Căn Studio, ";
+      if (type["1pn"]) product += "Căn 1PN+, ";
+      if (type["2pn"]) product += "Căn 2PN, ";
+      if (type["3pn"]) product += "Căn 3PN, ";
+      product = product.slice(0, -2);
+
+      await submitGoogleSheet("baogia", name, email, phone, product, content);
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        content: "",
+        type: { studio: false, "1pn": false, "2pn": false, "3pn": false },
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleChange = (
@@ -109,7 +130,7 @@ export default function QuotationForm() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  onSubmit={handleSubmit}
+                  onSubmit={async (e) => await handleSubmit(e)}
                   className="space-y-4 mt-6"
                 >
                   <motion.input

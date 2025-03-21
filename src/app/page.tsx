@@ -72,6 +72,7 @@ export default function Home() {
                   title="ĐĂNG KÝ THAM QUAN NHÀ MẪU"
                   subtitle="TRỰC TIẾP TỪ CĐT"
                   buttonText="ĐĂNG KÝ THAM QUAN"
+                  typeForm="thamquan"
                 />
                 <motion.button
                   initial={{ opacity: 0, scale: 0.75 }}
@@ -81,7 +82,7 @@ export default function Home() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setIsModalOpen(false)}
-                  className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg"
+                  className=" cursor-pointer absolute top-5 right-5 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg"
                 >
                   <svg
                     width="14"

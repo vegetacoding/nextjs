@@ -147,6 +147,7 @@ export default function Policy() {
                 title="ĐĂNG KÝ NHẬN CHÍNH SÁCH BÁN HÀNG"
                 subtitle="TRỰC TIẾP TỪ CĐT"
                 buttonText="ĐĂNG KÝ NHẬN CHÍNH SÁCH"
+                typeForm="chinhsach"
               />
               <motion.button
                 initial={{ opacity: 0, scale: 0.75 }}
@@ -156,7 +157,7 @@ export default function Policy() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsModalOpen(false)}
-                className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg"
+                className=" cursor-pointer absolute top-5 right-5 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg"
               >
                 <svg
                   width="14"
@@ -200,6 +201,7 @@ export default function Policy() {
                 title="ĐĂNG KÝ NHẬN BẢNG GIÁ"
                 subtitle="TRỰC TIẾP TỪ CĐT"
                 buttonText="ĐĂNG KÝ NHẬN BẢNG GIÁ"
+                typeForm="bangia"
               />
               <motion.button
                 initial={{ opacity: 0, scale: 0.75 }}
@@ -209,7 +211,7 @@ export default function Policy() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsPriceModalOpen(false)}
-                className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg"
+                className="cursor-pointer absolute top-5 right-5 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg"
               >
                 <svg
                   width="14"

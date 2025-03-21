@@ -1,16 +1,19 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { submitGoogleSheet } from "@/app/server/google-sheets.action";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export default function DynamicForm({
   title = "NHẬN BÁO GIÁ",
   subtitle = "TRỰC TIẾP TỪ CĐT",
   buttonText = "ĐĂNG KÝ NHẬN BÁO GIÁ",
+  typeForm = "thamquan",
 }: {
   title: string;
   subtitle: string;
   buttonText: string;
+  typeForm: string;
 }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,10 +27,33 @@ export default function DynamicForm({
       "3pn": false,
     },
   });
+  const [showNotification, setShowNotification] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
+    try {
+      const { name, phone, email, content, type } = formData;
+
+      let product = "";
+      if (type.studio) product += "Căn Studio, ";
+      if (type["1pn"]) product += "Căn 1PN+, ";
+      if (type["2pn"]) product += "Căn 2PN, ";
+      if (type["3pn"]) product += "Căn 3PN, ";
+      product = product.slice(0, -2);
+
+      submitGoogleSheet(typeForm, name, email, phone, product, content);
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        content: "",
+        type: { studio: false, "1pn": false, "2pn": false, "3pn": false },
+      });
+      setShowNotification(true);
+      setTimeout(() => setShowNotification(false), 30000); // Hide after 3 seconds
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleChange = (
@@ -52,6 +78,37 @@ export default function DynamicForm({
   };
   return (
     <>
+      <AnimatePresence>
+        {showNotification && (
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            className="fixed top-6 right-1/4 z-50 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg"
+            style={{
+              background: "linear-gradient(to right, #0F3581, #1E4B9B)",
+            }}
+          >
+            <div className="flex items-center space-x-2">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <p className="font-medium">Đã ghi nhận thông tin của bạn!</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +143,9 @@ export default function DynamicForm({
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.1, delay: 0.1 }}
-              onSubmit={handleSubmit}
+              onSubmit={async (e) => {
+                await handleSubmit(e);
+              }}
               className="space-y-4 mt-6"
             >
               <motion.input
@@ -199,7 +258,7 @@ export default function DynamicForm({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full py-3 bg-blue-gradient text-white font-bold rounded hover:bg-blue-gradient/90 transition-colors"
+                className="cursor-pointer w-full py-3 bg-blue-gradient text-white font-bold rounded hover:bg-blue-gradient/90 transition-colors"
               >
                 {buttonText}
               </motion.button>
