@@ -209,7 +209,7 @@ export default function Top10() {
 
       <section className="w-screen min-h-[600px] bg-[#0F3581] relative overflow-hidden p-8 sm:p-16">
         <div className="container mx-auto px-4 max-w-[1440px]">
-          <div className="flex justify-between items-center gap-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
             {/* Left Content */}
             <motion.div
               initial={{ x: -50, opacity: 0 }}
@@ -329,7 +329,7 @@ export default function Top10() {
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="w-1/2 justify-center items-center hidden lg:flex"
+              className="w-full lg:w-1/2 justify-center items-center "
             >
               <Image
                 src="/daily.png"

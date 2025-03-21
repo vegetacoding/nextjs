@@ -86,7 +86,7 @@ export default function Policy() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsPriceModalOpen(true)}
-                className="w-full border-2 bg-transparent border-blue-gradient text-blue-gradient font-bold py-3 px-8 rounded-lg hover:bg-blue-gradient hover:text-white transition-all"
+                className="w-full bg-blue-gradient text-white font-bold py-3 px-8 rounded-lg transition-all cursor-pointer"
               >
                 & BẢNG GIÁ CHI TIẾT
               </motion.button>
