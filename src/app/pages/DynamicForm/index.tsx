@@ -50,7 +50,7 @@ export default function DynamicForm({
         type: { studio: false, "1pn": false, "2pn": false, "3pn": false },
       });
       setShowNotification(true);
-      setTimeout(() => setShowNotification(false), 30000); // Hide after 3 seconds
+      setTimeout(() => setShowNotification(false), 3000); // Hide after 3 seconds
     } catch (error) {
       console.error(error);
     }

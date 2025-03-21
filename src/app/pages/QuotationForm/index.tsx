@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import DynamicSlider from "../DynamicSlider";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { submitGoogleSheet } from "@/app/server/google-sheets.action";
 
 const images = [
@@ -30,6 +30,7 @@ export default function QuotationForm() {
       "3pn": false,
     },
   });
+  const [showNotification, setShowNotification] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,7 +44,7 @@ export default function QuotationForm() {
       if (type["3pn"]) product += "Căn 3PN, ";
       product = product.slice(0, -2);
 
-      await submitGoogleSheet("baogia", name, email, phone, product, content);
+      submitGoogleSheet("baogia", name, email, phone, product, content);
       setFormData({
         name: "",
         phone: "",
@@ -51,6 +52,8 @@ export default function QuotationForm() {
         content: "",
         type: { studio: false, "1pn": false, "2pn": false, "3pn": false },
       });
+      setShowNotification(true);
+      setTimeout(() => setShowNotification(false), 3000); // Hide after 3 seconds
     } catch (error) {
       console.error(error);
     }
@@ -79,6 +82,37 @@ export default function QuotationForm() {
 
   return (
     <>
+      <AnimatePresence>
+        {showNotification && (
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            className="fixed top-6 right-1/4 z-50 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg"
+            style={{
+              background: "linear-gradient(to right, #0F3581, #1E4B9B)",
+            }}
+          >
+            <div className="flex items-center space-x-2">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <p className="font-medium">Đã ghi nhận thông tin của bạn!</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <section id="quotation-form" className="w-screen bg-white py-4 sm:py-16">
         <div className="container mx-auto px-4 max-w-[1320px] bg-white">
           <motion.div
@@ -249,7 +283,7 @@ export default function QuotationForm() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     type="submit"
-                    className="w-full py-3 bg-blue-gradient text-white font-bold rounded hover:bg-blue-gradient/90 transition-colors"
+                    className="cursor-pointer w-full py-3 bg-blue-gradient text-white font-bold rounded hover:bg-blue-gradient/90 transition-colors"
                   >
                     ĐĂNG KÝ NHẬN BÁO GIÁ
                   </motion.button>
